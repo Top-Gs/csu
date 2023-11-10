@@ -1,5 +1,4 @@
-TODO 
--> Creare Componente navbar si footer
+TODO : 
+-> Componente : Navbar, Footer, Carduri, Sortare, Grid, Text
 -> Implementare componente pentru fiecare pagina
--> Creare componente newscard ( butoane, continut )
 -> Implementare skeleton pentru fiecare pagina in parte
