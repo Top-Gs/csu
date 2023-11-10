@@ -1,0 +1,40 @@
+/* --- FOOTER COMPONENT STYLING --- */
+
+/* The footer */
+.footer {
+   background-color: var(--background);
+   height: 250px;
+   display: flex;
+   justify-content: space-between;
+   padding: 18px 82px;
+   align-items: center;
+}
+.footer-section {
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 12px;
+}
+.footer-section__element {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+.footer-section:last-of-type {
+   align-self: flex-start;
+   gap: 18px;
+}
+
+/* The footer elements */
+.footer-image,
+.footer-paragraph {
+   border-radius: 10px;
+   background-color: var(--primary);
+}
+.footer-image {
+   width: 45px;
+   height: 45px;
+}
+.footer-paragraph {
+   width: 150px;
+   height: 35px;
+}
