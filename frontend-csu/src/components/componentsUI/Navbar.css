@@ -1,0 +1,43 @@
+/* --- NAVBAR COMPONENT CSS ---  */
+
+/* Styling the elements */
+.navbar-element__image,
+.navbar-element__link,
+.navbar-element__title {
+   background-color: var(--primary);
+}
+
+.navbar-element__link,
+.navbar-element__title {
+   border-radius: 10px;
+}
+.navbar-element__link {
+   width: 75px;
+   height: 35px;
+}
+.navbar-element__image {
+   width: 55px;
+   height: 55px;
+   border-radius: 50%;
+}
+.navbar-element__title {
+   width: 300px;
+   height: 35px;
+}
+
+/* The Navbar */
+.navbar {
+   background-color: var(--background);
+   display: flex;
+   justify-content: space-between;
+   padding: 8px 12px;
+   height: 75px;
+}
+.navbar-element {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+}
+.navbar-element:last-of-type {
+   gap: 24px;
+}

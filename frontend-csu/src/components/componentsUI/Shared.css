@@ -1,0 +1,14 @@
+/* --- SHARED ELEMENTS CSS --- */
+
+/* Color used for skelethon */
+:root {
+   --primary: #9e9e9e;
+   --background: #393737;
+   --app-background: #202020;
+}
+/* General Level Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
