@@ -1,4 +1,0 @@
-TODO : 
--> Componente : Navbar, Footer, Carduri, Sortare, Grid, Text
--> Implementare componente pentru fiecare pagina
--> Implementare skeleton pentru fiecare pagina in parte
