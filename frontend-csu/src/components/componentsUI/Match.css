@@ -1,0 +1,43 @@
+/* --- MATCH SOMPONENT CSS --- */
+
+/* The wrapper */
+.match-wrapper {
+   width: 300px;
+   background-color: var(--background);
+   height: 125px;
+   border: 2px solid var(--primary);
+   position: relative;
+   display: flex;
+   align-items: center;
+   padding-top: 26px;
+   gap: 12px;
+   flex-flow: column nowrap;
+}
+
+/* The match component elements */
+.match-type,
+.match-summary,
+.match-teams__team {
+   background-color: var(--primary);
+   border-radius: 10px;
+}
+.match-type {
+   height: 25px;
+   width: 150px;
+   position: absolute;
+   top: -12px;
+}
+.match-summary {
+   width: 250px;
+   height: 30px;
+   align-self: center;
+}
+.match-teams {
+   display: flex;
+   justify-content: space-between;
+   gap: 160px;
+}
+.match-teams__team {
+   width: 45px;
+   height: 45px;
+}
