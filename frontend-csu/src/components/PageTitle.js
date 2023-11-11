@@ -1,4 +1,3 @@
-// TODO -> Complete this and CSS
 import "./componentsUI/PageTitle.css";
 
 export default function PageTitle() {
