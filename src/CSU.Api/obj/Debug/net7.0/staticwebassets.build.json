@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "yDEJwOEcBuWuXMzzvF7hDPMW4X8fwRPM3I6GBnDwNA0=",
+  "Source": "CSU.Api",
+  "BasePath": "_content/CSU.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSU.Domain\CSU.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\V1\" />
+    <Folder Include="Dtos\V1\Responses\" />
+    <Folder Include="Dtos\V1\Requests\" />
+    <Folder Include="Intefaces\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+</Project>

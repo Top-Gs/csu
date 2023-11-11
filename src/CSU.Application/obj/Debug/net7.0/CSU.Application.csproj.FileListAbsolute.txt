@@ -1,0 +1,15 @@
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\bin\Debug\net7.0\CSU.Application.deps.json
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\bin\Debug\net7.0\CSU.Application.dll
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\bin\Debug\net7.0\CSU.Application.pdb
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\bin\Debug\net7.0\CSU.Domain.dll
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\bin\Debug\net7.0\CSU.Domain.pdb
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\obj\Debug\net7.0\CSU.Application.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\obj\Debug\net7.0\CSU.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\obj\Debug\net7.0\CSU.Application.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\obj\Debug\net7.0\CSU.Application.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\obj\Debug\net7.0\CSU.Application.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\obj\Debug\net7.0\CSU.Application.csproj.CopyComplete
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\obj\Debug\net7.0\CSU.Application.dll
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\obj\Debug\net7.0\refint\CSU.Application.dll
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\obj\Debug\net7.0\CSU.Application.pdb
+C:\Users\Administrator\Desktop\CSU\csu\src\CSU.Application\obj\Debug\net7.0\ref\CSU.Application.dll
