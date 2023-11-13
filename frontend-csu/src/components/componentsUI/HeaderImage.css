@@ -1,0 +1,7 @@
+/* --- HEADER IMAGE CSS --- */
+
+.header-image {
+   background-color: var(--primary);
+   height: 200px;
+   border-radius: 10px;
+}
