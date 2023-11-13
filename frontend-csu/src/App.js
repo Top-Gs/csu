@@ -8,6 +8,7 @@ import NewsCard from "./components/NewsCard";
 import TeamSeniori from "./components/TeamSeniori";
 import TeamJuvenil from "./components/TeamJuvenil";
 import SponsorCard from "./components/SponsorCard";
+import SponsorSidebar from "./components/SponsorSidebar";
 
 function App() {
    return (
@@ -20,6 +21,7 @@ function App() {
          <TeamSeniori />
          <TeamJuvenil />
          <SponsorCard />
+         <SponsorSidebar />
          <Footer />
       </div>
    );
