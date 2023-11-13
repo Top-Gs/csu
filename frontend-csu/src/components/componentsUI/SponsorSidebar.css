@@ -1,0 +1,19 @@
+/* --- SPONSOR SIDEBAR CSS --- */
+
+/* The sponsor container */
+
+.sponsor-sidebar-container {
+   height: 75px;
+   background-color: var(--background);
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+/* The items */
+.sponsor-sidebar__item {
+   height: 50px;
+   width: 125px;
+   background-color: var(--primary);
+   border-radius: 10px;
+}
