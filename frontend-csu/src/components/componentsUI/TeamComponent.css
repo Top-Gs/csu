@@ -1,0 +1,35 @@
+/* --- TEAMS CSS --- */
+/* Folosit pentru stilizarea atat componentelor TeamSeniori.js cat si a componentelor TeamJuniori.js */
+
+.team-seniori-container,
+.team-juvenil-container {
+   width: 350px;
+   height: 400px;
+   background-color: var(--background);
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 12px;
+}
+
+/* Shared Styling */
+
+.team-juvenil__image,
+.team-seniori__image,
+.team-juvenil__summary,
+.team-seniori__summary {
+   background-color: var(--primary);
+   border-radius: 10px;
+}
+
+/* The elements */
+.team-seniori__image,
+.team-juvenil__image {
+   width: 350px;
+   height: 325px;
+}
+
+.team-seniori__summary,
+.team-juvenil__summary {
+   width: 150px;
+   height: 50px;
+}
