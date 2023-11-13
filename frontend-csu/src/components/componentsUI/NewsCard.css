@@ -1,0 +1,48 @@
+/* --- NEWS CARD CSS --- */
+
+/* The primary container */
+.news-card-container {
+   background-color: var(--background);
+   width: 250px;
+   height: 300px;
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 6px;
+}
+
+/* The news card elements */
+
+/* Shared styling */
+.news-card__image,
+.news-card-summary-items__item,
+.news-card-text__title,
+.news-card-text__headline {
+   background-color: var(--primary);
+   border-radius: 10px;
+}
+.news-card__image {
+   width: 250px;
+   height: 200px;
+}
+
+.news-card-summary-items {
+   display: flex;
+   gap: 8px;
+}
+.news-card-summary-items__item {
+   width: 60px;
+   height: 25px;
+}
+
+.news-card-text {
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 4px;
+}
+.news-card-text__title {
+   width: 200px;
+   height: 25px;
+}
+.news-card-text__headline {
+   height: 50px;
+}
