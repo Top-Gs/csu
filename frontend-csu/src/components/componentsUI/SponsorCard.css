@@ -1,0 +1,8 @@
+/* --- SPONSOR CARD CSS --- */
+
+.sponsor-card {
+   width: 200px;
+   height: 200px;
+   background-color: var(--primary);
+   border-radius: 10px;
+}
