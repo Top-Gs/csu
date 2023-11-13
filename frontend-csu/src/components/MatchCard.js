@@ -1,4 +1,4 @@
-import "./componentsUI/Match.css";
+import "./componentsUI/MatchCard.css";
 
 export default function Match() {
    return (

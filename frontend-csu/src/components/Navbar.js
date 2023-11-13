@@ -12,6 +12,7 @@ export default function Navbar() {
             <div className="navbar-element__link"></div>
             <div className="navbar-element__link"></div>
             <div className="navbar-element__link"></div>
+            <div className="navbar-element__link"></div>
          </div>
       </nav>
    );
