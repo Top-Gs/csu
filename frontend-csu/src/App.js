@@ -11,14 +11,14 @@ import TeamJuvenil from "./components/TeamJuvenil";
 function App() {
    return (
       <div className="App">
-         <Navbar />;
+         <Navbar />
          <HeaderImage />
-         <PageTitle />;
+         <PageTitle />
          <Match />
          <NewsCard />
          <TeamSeniori />
          <TeamJuvenil />
-         <Footer />;
+         <Footer />
       </div>
    );
 }
