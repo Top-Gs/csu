@@ -5,6 +5,8 @@ import PageTitle from "./components/PageTitle";
 import Match from "./components/MatchCard";
 import HeaderImage from "./components/HeaderImage";
 import NewsCard from "./components/NewsCard";
+import TeamSeniori from "./components/TeamSeniori";
+import TeamJuvenil from "./components/TeamJuvenil";
 
 function App() {
    return (
@@ -14,6 +16,8 @@ function App() {
          <PageTitle />;
          <Match />
          <NewsCard />
+         <TeamSeniori />
+         <TeamJuvenil />
          <Footer />;
       </div>
    );
