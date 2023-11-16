@@ -2,7 +2,7 @@
 
 /* The footer */
 .footer {
-   background-color: var(--background);
+   background-color: var(--navbar_active_link_bg);
    height: 250px;
    display: flex;
    justify-content: space-between;
@@ -19,7 +19,9 @@
    align-items: center;
    gap: 12px;
 }
+
 .footer-section:last-of-type {
+   margin-top: 58px;
    align-self: flex-start;
    gap: 18px;
 }
@@ -37,4 +39,47 @@
 .footer-paragraph {
    width: 150px;
    height: 35px;
+   color: var(--navbar_links_clr);
+   font-family: "Poppins", sans-serif;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   background-color: var(--navbar_active_link_bg);
+}
+.footer-contact {
+   width: 100%;
+}
+
+/* Email and Telephone */
+.telephone {
+   background: url("../../res/images/phone-icon.png") center no-repeat;
+}
+.email {
+   background: url("../../res/images/email-icon.png") center no-repeat;
+}
+/* Removing underline from mailto hyperlink */
+.email + a {
+   text-decoration: none;
+}
+
+/* Social media */
+.fb-logo {
+   background: url("../../res/images/facebook-logo.png") center no-repeat;
+}
+.insta-logo {
+   background: url("../../res/images/instagram-logo.png") center no-repeat;
+}
+.youtube-logo {
+   width: 60px;
+   background: url("../../res/images/youtube-logo.png") center no-repeat;
+}
+
+/* Sizing the images */
+.fb-logo,
+.telephone,
+.email,
+.fb-logo,
+.insta-logo,
+.youtube-logo {
+   background-size: contain;
 }
