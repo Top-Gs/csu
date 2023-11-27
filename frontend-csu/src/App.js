@@ -19,6 +19,7 @@ function App() {
          <NewsCard />
          <NewsCard />
          <NewsCard />
+         <SponsorSidebar />
          <Footer />
       </div>
    );

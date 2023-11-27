@@ -3,11 +3,11 @@
 /* The sponsor container */
 
 .sponsor-sidebar-container {
+   background-color: var(--page_background_accent);
    height: 75px;
-   background-color: var(--background);
    display: flex;
    align-items: center;
-   justify-content: space-evenly;
+   justify-content: center;
 }
 
 /* The items */
@@ -16,4 +16,12 @@
    width: 125px;
    background-color: var(--primary);
    border-radius: 10px;
+   visibility: hidden;
+}
+
+.sponsor-sidebar__image {
+   background: url("../../res/images/sponsori.jpg") no-repeat center;
+   background-size: contain;
+   height: 100%;
+   flex: 1;
 }
