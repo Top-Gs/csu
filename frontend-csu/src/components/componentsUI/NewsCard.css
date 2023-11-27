@@ -2,47 +2,62 @@
 
 /* The primary container */
 .news-card-container {
-   background-color: var(--background);
-   width: 250px;
-   height: 300px;
+   background-color: var(--page_background_accent);
+   width: 420px;
+   height: 520px;
    display: flex;
    flex-flow: column nowrap;
-   gap: 6px;
 }
 
 /* The news card elements */
 
-/* Shared styling */
-.news-card__image,
-.news-card-summary-items__item,
-.news-card-text__title,
-.news-card-text__headline {
-   background-color: var(--primary);
-   border-radius: 10px;
-}
 .news-card__image {
-   width: 250px;
-   height: 200px;
+   background: url("../../res/images/image.jpg") no-repeat center;
+   background-size: cover;
+   width: 420px;
+   height: 364px;
+   margin-bottom: 10px;
+   box-shadow: 0 5px 10px -1px var(--shadow_color);
 }
 
 .news-card-summary-items {
    display: flex;
-   gap: 8px;
+   gap: 12px;
+   padding: 0 4px;
 }
-.news-card-summary-items__item {
-   width: 60px;
-   height: 25px;
+
+.hashtag,
+.post-date,
+.divider {
+   font-size: 11px;
+   font-family: "Poppins";
+}
+.hashtag,
+.divider {
+   color: var(--hashtag_color);
+}
+.post-date {
+   color: var(--post_date_color);
 }
 
 .news-card-text {
    display: flex;
    flex-flow: column nowrap;
-   gap: 4px;
 }
 .news-card-text__title {
-   width: 200px;
-   height: 25px;
+   font-family: "Poppins";
+   font-size: 18px;
+   padding: 0 4px;
 }
 .news-card-text__headline {
-   height: 50px;
+   font-family: "Poppins";
+   font-size: 14px;
+   padding: 0 4px;
+}
+.news-card__link {
+   text-decoration: none;
+   font-family: "Poppins";
+   font-size: 11px;
+   text-align: center;
+   margin-top: 24px;
 }

@@ -1,0 +1,49 @@
+/* --- MAIN NEWS CARD CSS --- */
+* {
+   font-family: "Poppins", sans-serif;
+}
+.mnc-container {
+   height: 500px;
+   width: 1400px;
+   background-color: var(--page_background_accent);
+   box-shadow: 0 5px 10px -1px var(--shadow_color);
+   display: flex;
+   gap: 32px;
+}
+
+.mnc-image {
+   background: url("../../res/images/image_2.jpg") no-repeat center;
+   background-size: cover;
+   height: 500px;
+   width: 700px;
+}
+
+.mnc-content {
+   flex: 1;
+   display: flex;
+   flex-flow: column nowrap;
+}
+
+.mnc-summary__items {
+   display: flex;
+   gap: 12px;
+   padding: 4px 0;
+}
+
+.mnc-text__title {
+   font-size: 24px;
+   margin-bottom: 12px;
+}
+
+.mnc-text__headline {
+   font-size: 14px;
+}
+.mnc-text__link {
+   text-decoration: none;
+   font-size: 12px;
+   flex: 1;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   padding: 8px 0;
+}

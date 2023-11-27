@@ -9,19 +9,16 @@ import TeamSeniori from "./components/TeamSeniori";
 import TeamJuvenil from "./components/TeamJuvenil";
 import SponsorCard from "./components/SponsorCard";
 import SponsorSidebar from "./components/SponsorSidebar";
+import MainNewsCard from "./components/MainNewsCard";
 
 function App() {
    return (
       <div className="App">
          <Navbar />
-         <HeaderImage />
-         <PageTitle />
-         <Match />
+         <MainNewsCard />
          <NewsCard />
-         <TeamSeniori />
-         <TeamJuvenil />
-         <SponsorCard />
-         <SponsorSidebar />
+         <NewsCard />
+         <NewsCard />
          <Footer />
       </div>
    );

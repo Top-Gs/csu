@@ -10,7 +10,7 @@ export default function Footer() {
             </div>
             <div className="footer-section__element">
                <div className="footer-image telephone"></div>
-               <p className="footer-paragraph">07exemplu</p>
+               <p className="footer-paragraph">0230 522819</p>
             </div>
             <div className="footer-section__element">
                <div className="footer-image email"></div>

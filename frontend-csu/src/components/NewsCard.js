@@ -2,16 +2,23 @@ import "./componentsUI/NewsCard.css";
 
 export default function NewsCard() {
    return (
-      <div className="news-card-container">
-         <div src="" className="news-card__image"></div>
+      <figure className="news-card-container">
+         <img className="news-card__image" />
          <div className="news-card-summary-items">
-            <div className="news-card-summary-items__item"></div>
-            <div className="news-card-summary-items__item"></div>
+            <p className="news-card-summary-items__item hashtag">Juvenil</p>
+            <p className="news-card-summary-items__item divider"> | </p>
+            <p className="news-card-summary-items__item post-date">Noiembrie 06/2023</p>
          </div>
          <div className="news-card-text">
-            <p className="news-card-text__title"></p>
-            <p className="news-card-text__headline"></p>
+            <h2 className="news-card-text__title">Victorie pentru Juvenili!</h2>
+            <p className="news-card-text__headline">
+               Echipa de handbal juvenil a Clubului Sportiv Universitar a ajung acasa cu o victorie importanta dupa ce a spart gheata Campionatului
+               National de Handbal, conducand...
+            </p>
+            <a href="" className="news-card__link">
+               Vezi mai mult
+            </a>
          </div>
-      </div>
+      </figure>
    );
 }
