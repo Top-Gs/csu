@@ -11,12 +11,12 @@
    --navbar_links_clr: #f8f8f8;
    --navbar_active_link_bg: #3a7ab6; /* also used as the footer background-color*/
    --page_background: #fdefef;
-   --page_background_gradient: #bfd4ec;
+   --page_background_gradient: #f3f9ff;
    --page_background_accent: #fff;
    --shadow_color: #9bc5e9;
 
    /* Used for the background linear gradient */
-   --bg-gradient-blue: #0084e3;
+   --bg_gradient_blue: #bed4ec;
 
    --primary: #9e9e9e;
    --background: #393737;
