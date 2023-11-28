@@ -1,5 +1,5 @@
-import "./componentsUI/Shared.css";
-import "./componentsUI/Footer.css";
+import "./componentsUI/Shared.css"
+import "./componentsUI/Footer.css"
 
 export default function Footer() {
    return (
