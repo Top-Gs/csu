@@ -4,7 +4,7 @@
 }
 .mnc-container {
    height: 500px;
-   width: 1400px;
+   width: 1300px;
    background-color: var(--page_background_accent);
    box-shadow: 0 5px 10px -1px var(--shadow_color);
    display: flex;
