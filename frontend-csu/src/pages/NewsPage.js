@@ -8,7 +8,7 @@
 // - Cardul principal care apare primul cu informatiile zilei, in care vom avea stirea cea mai importanta.
 // - Cardurile secundare, care vor avea stirie secundare, sau "others".
 // NOTE : Amandoua tipuri de carduri trebuie onClick sa fie scalate in viewport. Background blurat? Overlay intunecat? Ask Dani.
-
+import React from "react";
 import "./pagesUI/NewsPage.css";
 import "../components/componentsUI/Shared.css";
 
