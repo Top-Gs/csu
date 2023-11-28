@@ -73,6 +73,17 @@
    width: 60px;
    background: url("../../res/images/youtube-logo.png") center no-repeat;
 }
+.fb-logo,
+.insta-logo,
+.youtube-logo {
+   transition: all 300ms;
+}
+.fb-logo:hover,
+.insta-logo:hover,
+.youtube-logo:hover {
+   filter: invert();
+   transition: all 300ms;
+}
 
 /* Sizing the images */
 .fb-logo,

@@ -1,0 +1,36 @@
+/* --- NEWS PAGE STYLING */
+
+/* The container */
+
+.news-container {
+   background: linear-gradient(
+      90deg,
+      var(--bg_gradient_blue) 0%,
+      var(--page_background) 15%,
+      var(--page_background) 85%,
+      var(--bg_gradient_blue) 100%
+   );
+}
+.content-container {
+   width: 100%;
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   gap: 24px;
+}
+.news-card-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 420px);
+   row-gap: 32px;
+   column-gap: 20px;
+   margin-bottom: 40px;
+}
+
+/* Spacing */
+.navbar {
+   margin-bottom: 45px;
+}
+
+.mnc-container {
+   margin-bottom: 40px;
+}
