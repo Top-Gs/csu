@@ -8,7 +8,6 @@ import "../../src/components/componentsUI/Shared.css";
 // Components Imports
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import SponsorSidebar from "../components/SponsorSidebar";
 import SponsorGrid from "../components/SponsorGrid";
 
 export default function Sponsors() {
@@ -21,7 +20,6 @@ export default function Sponsors() {
             <h2>CLUBUL SPORTIV UNIVERSITATEA SUCEAVA</h2>
          </div>
          <SponsorGrid />
-         <SponsorSidebar />
          <Footer />
       </div>
    );
