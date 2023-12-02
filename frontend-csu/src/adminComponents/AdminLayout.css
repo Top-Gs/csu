@@ -1,0 +1,76 @@
+.dashboard-container {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+  background-color: #dae4ed;
+}
+
+.dashboard-container > aside {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.dashboard-container > aside .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: clamp(40px, 5vw, 80px) 0;
+}
+
+.dashboard-container > aside .profile > div {
+  width: clamp(80px, 7.5vw, 160px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://images.unsplash.com/photo-1701309209296-bdfe97087074?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.dashboard-container > aside > ul {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-container > aside > ul li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  padding: 16px 32px;
+}
+
+.dashboard-container > aside > ul li.active {
+  background-color: #fff;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  overflow: hidden;
+}
+
+.right-section header {
+  padding: 32px;
+}
+
+.right-section section {
+  flex: 1;
+  background-color: #fefcef;
+  border-top-left-radius: 80px;
+  box-shadow: inset 15px 15px 15px -5px rgba(0, 0, 0, 0.25);
+  overflow-y: scroll;
+  padding: 32px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
