@@ -1,13 +1,32 @@
-import "./App.css";
-import AboutUs from "./pages/AboutUs";
-import Sponsors from "./pages/Sponsors";
-import SponsorGrid from "./components/SponsorGrid";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AdminLayout from "./adminComponents/AdminLayout";
+import AdminDashboard from "./adminComponents/AdminDashboard";
+import NewsAdm from "./adminComponents/NewsAdm";
+import NewsPage from "./pages/NewsPage";
 
 function App() {
   return (
-    <div className="App">
-      <Sponsors />
-    </div>
+    <Router>
+      <Routes>
+        {/* Main routes for homepage */}
+        <Route
+          path="/"
+          element={
+            <div className="App">
+              <NewsPage />
+            </div>
+          }
+        />
+
+        {/* Admin Routes */}
+        <Route path="/admin/*" element={<AdminLayout />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="news" element={<NewsAdm />} />
+          {/* Add more admin routes as needed */}
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

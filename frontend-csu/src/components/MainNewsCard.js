@@ -1,3 +1,4 @@
+import React from "react";
 import "./componentsUI/MainNewsCard.css";
 
 // NOTE : MNC = Main News Card.
