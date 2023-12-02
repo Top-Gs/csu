@@ -19,6 +19,7 @@
    gap: 24px;
 }
 .news-card-grid {
+   position: relative;
    display: grid;
    grid-template-columns: repeat(3, 420px);
    row-gap: 32px;

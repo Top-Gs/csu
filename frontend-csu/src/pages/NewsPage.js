@@ -31,8 +31,7 @@ import SponsorSidebar from "../components/SponsorSidebar";
 //       .then((data) => {
 //          let images = data.images;
 //          let container = document.getElementById("imageContainer");
-//          images.forEach((image) => {
-//             let img = document.createElement("img");
+//          images.forEach((image) => {s
 //             img.src = "data:image/jpeg;base64," + image;
 //             container.appendChild(img);
 //          });
@@ -50,7 +49,6 @@ export default function NewsPage() {
          <div className="content-container">
             <MainNewsCard />
             <section className="news-card-grid">
-               <NewsCard />
                <NewsCard />
                <NewsCard />
                <NewsCard />
