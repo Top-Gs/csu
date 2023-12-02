@@ -1,32 +1,19 @@
+// React Imports
+import React from "react";
+
+// Styling Imports
 import "../components/componentsUI/SponsorGrid.css";
 
 export default function SponsorGrid() {
-  return (
-    <div className="sponsor-grid-container">
-      <a
-        className="grid-item"
-        href="https://evp.primariasv.ro/dm_suceava/site.nsf/pagini/prima+pagina-0001220E"
-      >
-        <div className="suceava-logo logos"></div>
-      </a>
-      <a className="grid-item" href="https://suceava.iuliusmall.com/">
-        <div className="iulius-logo logos"></div>
-      </a>
-      <a className="grid-item" href="https://www.fitermanpharma.ro/">
-        <div className="fiterman-logo logos"></div>
-      </a>
-      <a className="grid-item" href="https://www.tipografiacelestin.ro/">
-        <div className="celestin-logo logos"></div>
-      </a>
-      <a className="grid-item" href="https://pepeneropizza.ro/">
-        <div className="pepenero-logo logos"></div>
-      </a>
-      <a className="grid-item" href="https://www.acoperisuri-mihu.ro/">
-        <div className="mihu-logo logos"></div>
-      </a>
-      <a className="grid-item" href="https://restaurantvivendi.ro/">
-        <div className="vivendi-logo logos"></div>
-      </a>
-    </div>
-  );
+   return (
+      <div className="sponsor-grid-container">
+         <a className="suceava-logo" href="https://evp.primariasv.ro/dm_suceava/site.nsf/pagini/prima+pagina-0001220E"></a>
+         <a className="iulius-logo" href="https://suceava.iuliusmall.com/"></a>
+         <a className="fiterman-logo" href="https://www.fitermanpharma.ro/"></a>
+         <a className="celestin-logo" href="https://www.tipografiacelestin.ro/"></a>
+         <a className="pepenero-logo" href="https://pepeneropizza.ro/"></a>
+         <a className="mihu-logo" href="https://www.acoperisuri-mihu.ro/"></a>
+         <a className="vivendi-logo" href="https://restaurantvivendi.ro/"></a>
+      </div>
+   );
 }

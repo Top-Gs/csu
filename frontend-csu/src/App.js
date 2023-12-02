@@ -3,14 +3,22 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdminLayout from "./adminComponents/AdminLayout";
 import AdminDashboard from "./adminComponents/AdminDashboard";
 import NewsAdm from "./adminComponents/NewsAdm";
-import NewsPage from "./pages/NewsPage";
+// import NewsPage from "./pages/NewsPage";
+import Sponsors from "./pages/Sponsors";
 
 function App() {
    return (
       <Router>
          <Routes>
             {/* Main routes for homepage */}
-            <Route path="/" element={<div className="App"></div>} />
+            <Route
+               path="/"
+               element={
+                  <div className="App">
+                     <Sponsors />
+                  </div>
+               }
+            />
 
             {/* Admin Routes */}
             <Route path="/admin/*" element={<AdminLayout />}>

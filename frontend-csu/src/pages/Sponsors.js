@@ -1,7 +1,13 @@
+// React Imports
+import React from "react";
+
+// Styling Imports
 import "./pagesUI/Sponsors.css";
+import "../../src/components/componentsUI/Shared.css";
+
+// Components Imports
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "../../src/components/componentsUI/Shared.css";
 import SponsorSidebar from "../components/SponsorSidebar";
 import SponsorGrid from "../components/SponsorGrid";
 
