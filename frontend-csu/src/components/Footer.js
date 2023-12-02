@@ -1,5 +1,6 @@
-import "./componentsUI/Shared.css"
-import "./componentsUI/Footer.css"
+import "./componentsUI/Shared.css";
+import "./componentsUI/Footer.css";
+import React from "react";
 
 export default function Footer() {
    return (
@@ -24,9 +25,9 @@ export default function Footer() {
                <p className="footer-paragraph">Vizitează-ne</p>
             </div>
             <div className="footer-section__element">
-               <a href="https://www.facebook.com/CSUSuceava" className="footer-image fb-logo" target="_blank" useRef="noreferrer noopener"></a>
-               <a href="https://www.instagram.com/csusuceava/" className="footer-image insta-logo" target="_blank" useRef="noreferrer noopener"></a>
-               <a href="https://www.youtube.com/@CSUSuceava" className="footer-image youtube-logo" target="_blank" useRef="noreferrer noopener"></a>
+               <a href="https://www.facebook.com/CSUSuceava" className="footer-image fb-logo" target="_blank" rel="noreferrer noopener"></a>
+               <a href="https://www.instagram.com/csusuceava/" className="footer-image insta-logo" target="_blank" rel="noreferrer noopener"></a>
+               <a href="https://www.youtube.com/@CSUSuceava" className="footer-image youtube-logo" target="_blank" rel="noreferrer noopener"></a>
             </div>
          </div>
       </footer>
