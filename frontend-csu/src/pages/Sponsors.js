@@ -3,7 +3,7 @@ import React from "react";
 
 // Styling Imports
 import "./pagesUI/Sponsors.css";
-import "../../src/components/componentsUI/Shared.css";
+import "../components/componentsUI/Shared.css";
 
 // Components Imports
 import Navbar from "../components/Navbar";
@@ -19,6 +19,7 @@ export default function Sponsors() {
             <div className="logo" alt="logo" />
             <h2>CLUBUL SPORTIV UNIVERSITATEA SUCEAVA</h2>
          </div>
+         <h2 className="sponsored-by">Sponsorizat de :</h2>
          <SponsorGrid />
          <Footer />
       </div>
