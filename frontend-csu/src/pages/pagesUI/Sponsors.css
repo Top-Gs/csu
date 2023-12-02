@@ -1,36 +1,49 @@
 .sponsors-container {
-  background-color: white;
+   background: linear-gradient(
+      90deg,
+      var(--bg_gradient_blue) 0%,
+      var(--page_background) 15%,
+      var(--page_background) 85%,
+      var(--bg_gradient_blue) 100%
+   );
 }
 
 .csu-team-photo {
-  background: url("../../res/images/csu-team.png") center/cover no-repeat;
-  border: none;
-  background-size: cover;
-  margin-left: 25%;
-  width: 720px;
-  height: 300px;
+   background: url("../../res/images/csu-team.png") center/cover no-repeat;
+   border: none;
+   background-size: cover;
+   margin-left: 25%;
+   width: 720px;
+   height: 300px;
 }
 h2 {
-  color: #3e4095;
-  font-family: Inknut Antiqua;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+   color: #3e4095;
+   font-family: "Poppins", sans-serif;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
 }
+
+.sponsored-by {
+   text-align: center;
+   font-weight: bold;
+   font-size: 24px;
+   margin-bottom: 48px;
+}
+
 .logo {
-  background: url("../../res/images/logo-csu.png") no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position: relative;
-  display: inline-block;
+   background: url("../../res/images/logo-csu.png") no-repeat;
+   background-size: contain;
+   background-position: center;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   position: relative;
+   display: inline-block;
 }
 .sponsors-logo-text {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
