@@ -1,28 +1,14 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import PageTitle from "./components/PageTitle";
-import Match from "./components/MatchCard";
-import HeaderImage from "./components/HeaderImage";
-import NewsCard from "./components/NewsCard";
-import TeamSeniori from "./components/TeamSeniori";
-import TeamJuvenil from "./components/TeamJuvenil";
-import SponsorCard from "./components/SponsorCard";
-import SponsorSidebar from "./components/SponsorSidebar";
-import MainNewsCard from "./components/MainNewsCard";
+import AboutUs from "./pages/AboutUs";
+import Sponsors from "./pages/Sponsors";
+import SponsorGrid from "./components/SponsorGrid";
 
 function App() {
-   return (
-      <div className="App">
-         <Navbar />
-         <MainNewsCard />
-         <NewsCard />
-         <NewsCard />
-         <NewsCard />
-         <SponsorSidebar />
-         <Footer />
-      </div>
-   );
+  return (
+    <div className="App">
+      <Sponsors />
+    </div>
+  );
 }
 
 export default App;

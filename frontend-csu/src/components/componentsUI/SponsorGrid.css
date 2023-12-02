@@ -1,0 +1,58 @@
+.sponsor-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 800px;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 20px;
+  place-items: center;
+}
+.suceava-logo {
+  background: url("../../res/images/suceava.png") no-repeat;
+  background-size: contain;
+}
+.iulius-logo {
+  background: url("../../res/images/iulius.png") no-repeat;
+  background-size: contain;
+}
+.fiterman-logo {
+  background: url("../../res/images/fiterman.png") no-repeat;
+  background-size: contain;
+}
+.celestin-logo {
+  background: url("../../res/images/celestin.png") no-repeat;
+  background-size: contain;
+}
+.pepenero-logo {
+  background: url("../../res/images/pepenero.png") no-repeat;
+  background-size: contain;
+  filter: invert();
+}
+.mihu-logo {
+  background: url("../../res/images/mihu.png") no-repeat;
+  background-size: contain;
+}
+.vivendi-logo {
+  background: url("../../res/images/vivendi.png") no-repeat;
+  background-size: contain;
+  grid-column: -1/2;
+}
+.grid-item {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.sponsors-logo-text {
+  margin: 20px 0;
+}
+
+.logos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

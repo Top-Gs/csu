@@ -6,29 +6,29 @@
 
 /* Color used for skelethon */
 :root {
-   /* Used for the Navbar */
-   --navbar_bg: #7aafff;
-   --navbar_links_clr: #f8f8f8;
-   --navbar_active_link_bg: #3a7ab6; /* also used as the footer background-color*/
-   --page_background: #fdefef;
-   --page_background_gradient: #bfd4ec;
-   --page_background_accent: #fff;
-   --shadow_color: #9bc5e9;
+  /* Used for the Navbar */
+  --navbar_bg: #7aafff;
+  --navbar_links_clr: #f8f8f8;
+  --navbar_active_link_bg: #3a7ab6; /* also used as the footer background-color*/
+  --page_background: #fdefef;
+  --page_background_gradient: #bfd4ec;
+  --page_background_accent: #fff;
+  --shadow_color: #9bc5e9;
 
-   /* Used for the background linear gradient */
-   --bg-gradient-blue: #0084e3;
+  /* Used for the background linear gradient */
+  --bg_gradient_blue: #0084e3;
 
-   --primary: #9e9e9e;
-   --background: #393737;
-   --app-background: #202020;
+  --primary: #9e9e9e;
+  --background: #393737;
+  --app-background: #202020;
 
-   /* Text colors */
-   --hashtag_color: #808080;
-   --post_date_color: #3e4095;
+  /* Text colors */
+  --hashtag_color: #808080;
+  --post_date_color: #3e4095;
 }
 /* General Level Reset */
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
