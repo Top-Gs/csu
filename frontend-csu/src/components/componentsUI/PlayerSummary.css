@@ -31,6 +31,7 @@
 .player-summary__divider {
    color: var(--post_date_color);
    font-weight: bold;
+   margin-bottom: 0;
 }
 
 .player-summary__name {
