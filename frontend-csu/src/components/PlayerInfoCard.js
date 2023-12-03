@@ -1,5 +1,3 @@
-// TODO JS si styling
-
 // React Imports
 import React from "react";
 
