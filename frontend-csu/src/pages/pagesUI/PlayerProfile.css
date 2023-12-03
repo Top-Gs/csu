@@ -1,0 +1,11 @@
+/* PLAYER PROFILE STYLING */
+
+.player-profile-main-container {
+   background: linear-gradient(
+      90deg,
+      var(--bg_gradient_blue) 0%,
+      var(--page_background) 15%,
+      var(--page_background) 85%,
+      var(--bg_gradient_blue) 100%
+   );
+}

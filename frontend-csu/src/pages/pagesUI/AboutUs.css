@@ -1,30 +1,44 @@
-.about-us-container {
-  background: linear-gradient(
-    90deg,
-    var(--bg_gradient_blue) 0%,
-    var(--page_background) 15%,
-    var(--page_background) 85%,
-    var(--bg_gradient_blue) 100%
-  );
+/* ABOUT US PAGE STYLING */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins";
 }
 
+.about-us-container {
+   background: linear-gradient(
+      90deg,
+      var(--bg_gradient_blue) 0%,
+      var(--page_background) 15%,
+      var(--page_background) 85%,
+      var(--bg_gradient_blue) 100%
+   );
+}
+.info-container {
+   width: 825px;
+   margin: auto;
+}
 .csu-team-photo {
-  background: url("../../res/images/csu-team.png") center/cover no-repeat;
-  border: none;
-  background-size: cover;
-  margin-left: 18%;
-  width: 720px;
-  height: 300px;
+   background: url("../../res/images/csu-team.png") center/cover no-repeat;
+   background-size: cover;
+   margin: auto;
+   width: 700px;
+   height: 300px;
+   margin-bottom: 32px;
 }
 
 .sponsors-logo-text {
-  display: inline;
+   display: inline;
 }
 h3 {
-  margin: 0 45vw;
+   text-align: center;
+   margin-bottom: 4px;
 }
 p {
-  font-size: 14px;
-  padding: 0 4px;
-  margin: 10px 100px;
+   font-size: 14px;
+   margin-bottom: 24px;
+   text-align: justify;
+   text-justify: distribute;
 }
