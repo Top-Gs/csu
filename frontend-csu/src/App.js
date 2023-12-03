@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdminLayout from "./adminComponents/AdminLayout";
 import AdminDashboard from "./adminComponents/AdminDashboard";
 import NewsAdm from "./adminComponents/NewsAdm";
-// // import NewsPage from "./pages/NewsPage";
-// // import Sponsors from "./pages/Sponsors";
+
+// NOTE : Pentru testing
+// import NewsPage from "./pages/NewsPage";
+// import Sponsors from "./pages/Sponsors";
 // import AboutUs from "./pages/AboutUs";
 
-// // NOTE : Testing componente pentru player page
-// import PlayerClubInfo from "./components/PlayerClubInfo";
-import PlayerInfoCard from "./components/PlayerInfoCard";
-import PlayerSummary from "./components/PlayerSummary";
+import PlayerProfile from "./pages/PlayerProfile";
 
 function App() {
    return (
@@ -21,8 +20,7 @@ function App() {
                path="/"
                element={
                   <div className="App">
-                     <PlayerSummary />
-                     <PlayerInfoCard />
+                     <PlayerProfile />
                   </div>
                }
             />
