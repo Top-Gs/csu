@@ -4,7 +4,8 @@ import AdminLayout from "./adminComponents/AdminLayout";
 import AdminDashboard from "./adminComponents/AdminDashboard";
 import NewsAdm from "./adminComponents/NewsAdm";
 // import NewsPage from "./pages/NewsPage";
-import Sponsors from "./pages/Sponsors";
+// import Sponsors from "./pages/Sponsors";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
    return (
@@ -15,7 +16,7 @@ function App() {
                path="/"
                element={
                   <div className="App">
-                     <Sponsors />
+                     <AboutUs />
                   </div>
                }
             />
