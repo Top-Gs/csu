@@ -8,8 +8,8 @@ import NewsAdm from "./adminComponents/NewsAdm";
 // import AboutUs from "./pages/AboutUs";
 
 // // NOTE : Testing componente pentru player page
-// import PlayerInfoCard from "./components/PlayerInfoCard";
 // import PlayerClubInfo from "./components/PlayerClubInfo";
+import PlayerInfoCard from "./components/PlayerInfoCard";
 import PlayerSummary from "./components/PlayerSummary";
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
                element={
                   <div className="App">
                      <PlayerSummary />
+                     <PlayerInfoCard />
                   </div>
                }
             />
