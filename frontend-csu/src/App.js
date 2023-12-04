@@ -16,6 +16,7 @@ function App() {
          <Router>
             <Routes>
                {/* Main routes for homepage */}
+               <Route path="/" element={<NewsPage />} />
                <Route path="/playerprofile" element={<PlayerProfile />} />
                <Route path="/news" element={<NewsPage />} />
                <Route path="/sponsors" element={<Sponsors />} />
