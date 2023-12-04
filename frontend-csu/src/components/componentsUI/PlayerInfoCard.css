@@ -72,12 +72,6 @@
    gap: 8px;
 }
 
-.fb-logo {
-   background: url("../../res/images/facebook-logo.png");
-}
-.insta-logo {
-   background: url("../../res/images/instagram-logo.png");
-}
 .socials-image {
    width: 35px;
    height: 35px;
