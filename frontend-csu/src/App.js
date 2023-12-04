@@ -5,34 +5,30 @@ import AdminDashboard from "./adminComponents/AdminDashboard";
 import NewsAdm from "./adminComponents/NewsAdm";
 
 // NOTE : Pentru testing
-// import NewsPage from "./pages/NewsPage";
-// import Sponsors from "./pages/Sponsors";
-// import AboutUs from "./pages/AboutUs";
-
+import NewsPage from "./pages/NewsPage";
+import Sponsors from "./pages/Sponsors";
+import AboutUs from "./pages/AboutUs";
 import PlayerProfile from "./pages/PlayerProfile";
 
 function App() {
    return (
-      <Router>
-         <Routes>
-            {/* Main routes for homepage */}
-            <Route
-               path="/"
-               element={
-                  <div className="App">
-                     <PlayerProfile />
-                  </div>
-               }
-            />
-
-            {/* Admin Routes */}
-            <Route path="/admin/*" element={<AdminLayout />}>
-               <Route index element={<AdminDashboard />} />
-               <Route path="news" element={<NewsAdm />} />
-               {/* Add more admin routes as needed */}
-            </Route>
-         </Routes>
-      </Router>
+      <div className="App">
+         <Router>
+            <Routes>
+               {/* Main routes for homepage */}
+               <Route path="/playerprofile" element={<PlayerProfile />} />
+               <Route path="/news" element={<NewsPage />} />
+               <Route path="/sponsors" element={<Sponsors />} />
+               <Route path="/aboutus" element={<AboutUs />} />
+               {/* Admin Routes */}
+               <Route path="/admin/*" element={<AdminLayout />}>
+                  <Route index element={<AdminDashboard />} />
+                  <Route path="news" element={<NewsAdm />} />
+                  {/* Add more admin routes as needed */}
+               </Route>
+            </Routes>
+         </Router>
+      </div>
    );
 }
 
