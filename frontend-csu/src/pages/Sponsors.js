@@ -15,7 +15,7 @@ export default function Sponsors() {
       <div className="sponsors-container">
          <Navbar />
          <div className="csu-team-photo" src="../../res/images/csu-team.png" alt="CSU team photo." />
-         <div className="sponsors-logo-text">
+         <div className="sponsors-logo-primary-text">
             <div className="logo" alt="logo" />
             <h2>CLUBUL SPORTIV UNIVERSITATEA SUCEAVA</h2>
          </div>

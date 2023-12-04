@@ -37,6 +37,7 @@
 
 .mnc-text__headline {
    font-size: 14px;
+   margin-bottom: 0;
 }
 .mnc-text__link {
    text-decoration: none;
