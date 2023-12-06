@@ -1,12 +1,6 @@
 /* ABOUT US PAGE STYLING */
 
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: "Poppins";
-}
-
+/* The page container */
 .about-us-container {
    background: linear-gradient(
       90deg,
@@ -16,11 +10,15 @@
       var(--bg_gradient_blue) 100%
    );
 }
-.info-container {
+
+/* The content container */
+.about-us__content {
    width: 825px;
    margin: auto;
+   margin-bottom: 54px;
 }
-.csu-team-photo {
+
+.about-us__team-photo {
    background: url("../../res/images/csu-team.png") center/cover no-repeat;
    background-size: cover;
    margin: auto;
@@ -29,14 +27,12 @@
    margin-bottom: 32px;
 }
 
-.sponsors-logo-text {
-   display: inline;
-}
-h3 {
+.about-us__heading {
    text-align: center;
    margin-bottom: 4px;
 }
-p {
+
+.about-us__paragraph {
    font-size: 14px;
    margin-bottom: 24px;
    text-align: justify;

@@ -1,10 +1,13 @@
+// React Imports
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Admin components imports
 import AdminLayout from "./adminComponents/AdminLayout";
 import AdminDashboard from "./adminComponents/AdminDashboard";
 import NewsAdm from "./adminComponents/NewsAdm";
 
-// NOTE : Pentru testing
+// Pages imports
 import NewsPage from "./pages/NewsPage";
 import Sponsors from "./pages/Sponsors";
 import AboutUs from "./pages/AboutUs";
