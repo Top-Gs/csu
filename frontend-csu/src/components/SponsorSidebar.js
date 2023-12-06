@@ -15,6 +15,7 @@ export default function SponsorSidebar() {
          <div className="sponsor-sidebar__item pepenero-logo"></div>
          <div className="sponsor-sidebar__item mihu-logo"></div>
          <div className="sponsor-sidebar__item vivendi-logo"></div>
+         <div className="sponsor-sidebar__item usv-logo"></div>
       </div>
    );
 }
