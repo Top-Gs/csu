@@ -35,7 +35,9 @@
 }
 .vivendi-logo {
    background: url("../../res/images/vivendi.jpg");
-   grid-column: 1/-1;
+}
+.usv-logo {
+   background: url("../../res/images/logo-usv.png");
 }
 
 .suceava-logo,
@@ -44,7 +46,8 @@
 .celestin-logo,
 .pepenero-logo,
 .mihu-logo,
-.vivendi-logo {
+.vivendi-logo,
+.usv-logo {
    display: inline-block;
    background-size: contain;
    background-repeat: no-repeat;
@@ -64,7 +67,8 @@
 .fiterman-logo,
 .celestin-logo,
 .mihu-logo,
-.vivendi-logo {
+.vivendi-logo,
+.usv-logo {
    filter: grayscale();
    transition: all 300ms;
 }
@@ -74,7 +78,8 @@
 .fiterman-logo:hover,
 .celestin-logo:hover,
 .mihu-logo:hover,
-.vivendi-logo:hover {
+.vivendi-logo:hover,
+.usv-logo:hover {
    filter: none;
    transition: all 300ms;
 }
