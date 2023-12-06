@@ -1,3 +1,6 @@
+/* SPONSORS PAGE STYLING */
+
+/* The Sponsors container */
 .sponsors-container {
    background: linear-gradient(
       90deg,
@@ -8,42 +11,38 @@
    );
 }
 
-.csu-team-photo {
+/* The container items */
+.sponsors__team-photo {
    background: url("../../res/images/csu-team.png") center/cover no-repeat;
-   border: none;
-   background-size: cover;
    margin: auto;
    width: 720px;
    height: 300px;
+   margin-bottom: 16px;
 }
-h2 {
+
+/* The club component container */
+.sponsors__club-component {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* The club component items */
+.club__logo {
+   background: url("../../res/images/logo-csu.png") center/contain no-repeat;
+   width: 50px;
+   height: 50px;
+}
+
+.club__title {
    color: #3e4095;
    font-family: "Poppins", sans-serif;
    font-size: 32px;
-   font-style: normal;
-   font-weight: 400;
-   line-height: normal;
 }
 
-.sponsored-by {
+.sponsors__sponsored-by {
    text-align: center;
    font-weight: bold;
    font-size: 24px;
    margin-bottom: 48px;
-}
-
-.logo {
-   background: url("../../res/images/logo-csu.png") no-repeat;
-   background-size: contain;
-   background-position: center;
-   width: 50px;
-   height: 50px;
-   border-radius: 50%;
-   position: relative;
-   display: inline-block;
-}
-.sponsors-logo-primary-text {
-   display: flex;
-   align-items: center;
-   justify-content: center;
 }
