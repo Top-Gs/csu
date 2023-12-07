@@ -29,13 +29,12 @@ export default function MainNewsCard() {
                         Ne vom concentra sa mentinem determinarea jucatorilor de a-si oferi maxmimul potential si de a ajunge in finala Trofeului
                         Carpati. Speram sa aducem Trofeul Carpati acasa in Suceava pentru prima oara in cei 10 ani de cand participam la aceasta
                         competitie. In alti ani am fost aproape, dar niciodata atat de aproape. Baietii au facut, dupa cum ati vazut treaba buna, si
-                        vor face treaba buna si mai tarziu.
+                        vor face treaba buna si mai tarziu..
                      </q>
                   </blockquote>
                </p>
-               <p className="mnc-text__headline">Intrebat cum s-a simtit dupa victoria cucerita in acea seara, portarul Marin Ionescu a declarat..</p>
             </article>
-            <a href="" className="mnc-text__link">
+            <a href="http://localhost:3000/singlenews" className="mnc-text__link">
                Vezi mai mult
             </a>
          </div>
