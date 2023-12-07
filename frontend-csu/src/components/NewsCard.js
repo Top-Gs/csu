@@ -1,15 +1,11 @@
-import "./componentsUI/NewsCard.css";
+// React Imports
 import React from "react";
-import { useState } from "react";
 
-export default function NewsCard() {
-   const [isActive, setIsActive] = useState(false);
-   const handleClick = () => {
-      setIsActive((current) => !current);
-   };
+import "./componentsUI/NewsCard.css";
 
+export default function NersCard() {
    return (
-      <figure className={`${isActive ? "news-card-container-clicked" : "news-card-container"}`} onClick={handleClick}>
+      <figure className="news-card-container">
          <img className="news-card__image" />
          <div className="news-card-summary-items">
             <p className="news-card-summary-items__item hashtag">Juvenil</p>
@@ -22,7 +18,7 @@ export default function NewsCard() {
                Echipa de handbal juvenil a Clubului Sportiv Universitar a ajung acasa cu o victorie importanta dupa ce a spart gheata Campionatului
                National de Handbal, conducand...
             </p>
-            <p className="news-card__link">Vezi mai mult</p>
+            <a className="news-card__link">Vezi mai mult</a>
          </div>
       </figure>
    );
