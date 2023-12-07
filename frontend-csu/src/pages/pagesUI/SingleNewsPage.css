@@ -1,0 +1,67 @@
+/* SINGLE NEWS PAGE STYLING */
+
+/* The container */
+.snp-container {
+   background: linear-gradient(
+      90deg,
+      var(--bg_gradient_blue) 0%,
+      var(--page_background) 15%,
+      var(--page_background) 85%,
+      var(--bg_gradient_blue) 100%
+   );
+}
+
+/* The content container */
+.snp__content-container {
+   margin: auto;
+   padding: 0 48px;
+   width: 60%;
+}
+
+/* The items */
+.snp__title {
+   font-size: 38px;
+   line-height: 0.9;
+   text-transform: uppercase;
+   margin: 0 auto;
+   margin-bottom: 32px;
+   width: 90%;
+}
+
+/* The summary items and container */
+.snp__summary {
+   display: flex;
+   gap: 16px;
+   width: 90%;
+   margin: auto;
+   margin-bottom: 10px;
+}
+.summary__item {
+   font-size: 13px;
+}
+
+/* The rest of elements */
+.snp__image {
+   background: url("../../res/images/image_2.jpg") center/cover no-repeat;
+   height: 450px;
+   width: 115%;
+   margin-bottom: 32px;
+   position: relative;
+   right: 10%;
+}
+
+.snp__paragraph {
+   font-size: 16px;
+   width: 90%;
+   margin: auto;
+   margin-bottom: 36px;
+}
+
+.snp__paragraph:first-of-type {
+   font-weight: 500;
+}
+.snp__paragraph:last-of-type {
+   margin-bottom: 36px;
+}
+
+/* Common margins */
