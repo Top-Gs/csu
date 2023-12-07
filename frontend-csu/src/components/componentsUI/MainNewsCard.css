@@ -6,9 +6,15 @@
    height: 500px;
    width: 1300px;
    background-color: var(--page_background_accent);
-   box-shadow: 0 5px 10px -1px var(--shadow_color);
+   box-shadow: 0 10px 15px -1px var(--shadow_color);
    display: flex;
    gap: 32px;
+   transition: all 300ms;
+}
+
+.mnc-container:hover {
+   transform: scale(1.05);
+   box-shadow: 0 5px 10px -10px var(--shadow_color);
 }
 
 .mnc-image {

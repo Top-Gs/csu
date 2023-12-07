@@ -1,6 +1,7 @@
 // React Imports
 import React from "react";
 
+// Styling Imports
 import "./componentsUI/NewsCard.css";
 
 export default function NersCard() {
@@ -18,7 +19,9 @@ export default function NersCard() {
                Echipa de handbal juvenil a Clubului Sportiv Universitar a ajung acasa cu o victorie importanta dupa ce a spart gheata Campionatului
                National de Handbal, conducand...
             </p>
-            <a className="news-card__link">Vezi mai mult</a>
+            <a href="http://localhost:3000/singlenews" className="news-card__link">
+               Vezi mai mult
+            </a>
          </div>
       </figure>
    );
