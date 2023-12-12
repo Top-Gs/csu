@@ -1,0 +1,85 @@
+/* SPONSOR GRID CSS */
+
+/* The Grid container */
+.sponsor-grid-container {
+   display: grid;
+   grid-template-columns: auto auto;
+   width: 800px;
+   height: 400px;
+   margin: auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   gap: 20px;
+}
+
+/* The grid items */
+.suceava-logo {
+   background: url("../../res/images/suceava.png");
+}
+.iulius-logo {
+   background: url("../../res/images/iulius.png");
+}
+.fiterman-logo {
+   background: url("../../res/images/fiterman.png");
+   transform: scale(1.8);
+}
+.celestin-logo {
+   background: url("../../res/images/celestin.png");
+}
+.pepenero-logo {
+   background: url("../../res/images/pepenero.png");
+   filter: invert();
+}
+.mihu-logo {
+   background: url("../../res/images/mihu.png");
+}
+.vivendi-logo {
+   background: url("../../res/images/vivendi.jpg");
+}
+.usv-logo {
+   background: url("../../res/images/logo-usv.png");
+}
+
+.suceava-logo,
+.iulius-logo,
+.fiterman-logo,
+.celestin-logo,
+.pepenero-logo,
+.mihu-logo,
+.vivendi-logo,
+.usv-logo {
+   display: inline-block;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.celestin-logo,
+.pepenero-logo,
+.mihu-logo,
+.vivendi-logo {
+   transform: scale(0.8);
+}
+
+/* Setting all colorful logos to be grayscaled and interact when hovering over them */
+.suceava-logo,
+.iulius-logo,
+.fiterman-logo,
+.celestin-logo,
+.mihu-logo,
+.vivendi-logo,
+.usv-logo {
+   filter: grayscale();
+   transition: all 300ms;
+}
+
+.suceava-logo:hover,
+.iulius-logo:hover,
+.fiterman-logo:hover,
+.celestin-logo:hover,
+.mihu-logo:hover,
+.vivendi-logo:hover,
+.usv-logo:hover {
+   filter: none;
+   transition: all 300ms;
+}

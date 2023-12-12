@@ -1,0 +1,48 @@
+/* SPONSORS PAGE STYLING */
+
+/* The Sponsors container */
+.sponsors-container {
+   background: linear-gradient(
+      90deg,
+      var(--bg_gradient_blue) 0%,
+      var(--page_background) 15%,
+      var(--page_background) 85%,
+      var(--bg_gradient_blue) 100%
+   );
+}
+
+/* The container items */
+.sponsors__team-photo {
+   background: url("../../res/images/csu-team.png") center/cover no-repeat;
+   margin: auto;
+   width: 720px;
+   height: 300px;
+   margin-bottom: 16px;
+}
+
+/* The club component container */
+.sponsors__club-component {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* The club component items */
+.club__logo {
+   background: url("../../res/images/logo-csu.png") center/contain no-repeat;
+   width: 50px;
+   height: 50px;
+}
+
+.club__title {
+   color: #3e4095;
+   font-family: "Poppins", sans-serif;
+   font-size: 32px;
+}
+
+.sponsors__sponsored-by {
+   text-align: center;
+   font-weight: bold;
+   font-size: 24px;
+   margin-bottom: 48px;
+}

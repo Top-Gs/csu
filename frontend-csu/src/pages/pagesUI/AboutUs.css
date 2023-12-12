@@ -1,0 +1,40 @@
+/* ABOUT US PAGE STYLING */
+
+/* The page container */
+.about-us-container {
+   background: linear-gradient(
+      90deg,
+      var(--bg_gradient_blue) 0%,
+      var(--page_background) 15%,
+      var(--page_background) 85%,
+      var(--bg_gradient_blue) 100%
+   );
+}
+
+/* The content container */
+.about-us__content {
+   width: 825px;
+   margin: auto;
+   margin-bottom: 54px;
+}
+
+.about-us__team-photo {
+   background: url("../../res/images/csu-team.png") center/cover no-repeat;
+   background-size: cover;
+   margin: auto;
+   width: 700px;
+   height: 300px;
+   margin-bottom: 32px;
+}
+
+.about-us__heading {
+   text-align: center;
+   margin-bottom: 4px;
+}
+
+.about-us__paragraph {
+   font-size: 14px;
+   margin-bottom: 24px;
+   text-align: justify;
+   text-justify: distribute;
+}

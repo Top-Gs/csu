@@ -1,0 +1,89 @@
+/* PLAYER SUMMARY COMPONENT STYLING */
+
+/* The container */
+.player-summary-container,
+.player-summary-information {
+   position: relative;
+   display: flex;
+   align-items: center;
+   gap: 48px;
+   padding: 0 128px;
+}
+.player-summary-information {
+   position: relative;
+   padding: 8px;
+}
+
+/* The items */
+.player-summary__image {
+   background: url("../../res/images/player_profile_test.jpg") center/cover no-repeat;
+   background-position-x: -25px;
+   width: 175px;
+   height: 175px;
+   border-radius: 50%;
+   border: 1px solid var(--post_date_color);
+}
+
+.player-summary__name,
+.player-summary__position,
+.player-summary__team,
+.player-summary__origin-country,
+.player-summary__divider {
+   color: var(--post_date_color);
+   font-weight: bold;
+   margin-bottom: 0;
+}
+
+.player-summary__name {
+   font-size: 26px;
+   border-top: 1px solid var(--post_date_color);
+   border: 100px;
+}
+
+.player-summary__position,
+.player-summary__team,
+.player-summary__origin-country {
+   font-size: 20px;
+   padding-top: 6px;
+}
+
+.player-summary__divider {
+   height: 35px;
+   width: 1px;
+   background-color: var(--post_date_color);
+}
+
+/* The lines */
+
+/* Player summary top and bottom lines */
+.player-summary__top-line,
+.player-summary__bottom-line {
+   width: 1590px;
+   height: 1px;
+   background-color: var(--post_date_color);
+   position: absolute;
+   left: -40px;
+}
+.player-summary__top-line {
+   top: 0;
+}
+
+.player-summary__bottom-line {
+   bottom: 0;
+}
+
+/* Player image top and bottom lines */
+.player-image__top-line,
+.player-image__bottom-line {
+   height: 1px;
+   width: 120px;
+   background-color: var(--post_date_color);
+   position: absolute;
+   left: 0;
+}
+.player-image__top-line {
+   top: 60px;
+}
+.player-image__bottom-line {
+   bottom: 60px;
+}

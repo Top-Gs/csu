@@ -1,13 +1,3 @@
-//  TODO :         Feature-uri pentru pagina de News :
-// 1. Finalizare componente si update card-uri
-// 2. Integrabilitate cu back-end-ul si API-ul
-// 3. Hover states? Pagina de news scalabila? Componente imbunatatite.
-// 4. React routes catre homepage si admin dashboard
-
-// Pentru pagina de news vor exista doua tipuri de card-uri :
-// - Cardul principal care apare primul cu informatiile zilei, in care vom avea stirea cea mai importanta.
-// - Cardurile secundare, care vor avea stirie secundare, sau "others".
-// NOTE : Amandoua tipuri de carduri trebuie onClick sa fie scalate in viewport. Background blurat? Overlay intunecat? Ask Dani.
 import React from "react";
 import "./pagesUI/NewsPage.css";
 import "../components/componentsUI/Shared.css";
@@ -18,28 +8,39 @@ import MainNewsCard from "../components/MainNewsCard";
 import NewsCard from "../components/NewsCard";
 import SponsorSidebar from "../components/SponsorSidebar";
 
-// function fetch() {
-//    let options = {
-//       method: "GET",
-//       headers: {
-//          "Content-Type": "application/json",
-//       },
-//    };
+/* TODO :
+> Cum se face Fetch in React si cum integrez?
+> Componente pentru News cu ruta catre componenta respectiva.
+> Functie de limitare a headline-urilui intr-un numar restrans de caractere
+> O cale mai bune de a integra animatii si UX?
+> Ordonarea prioritatii in functie de cea mai recenta data
+   NOTE -) Teoretic, ar trebui sa punem cea mai recenta stire dupa ce isi pierde relevanta in casuta a[0][0] din Grid.
+*/
 
-//    fetch("https://localhost:7280/api/v1/news", options)
-//       .then((response) => response.json())
-//       .then((data) => {
-//          let images = data.images;
-//          let container = document.getElementById("imageContainer");
-//          images.forEach((image) => {s
-//             img.src = "data:image/jpeg;base64," + image;
-//             container.appendChild(img);
-//          });
+// FUNCTIA DE FETCH
+/* function fetch() {
+    let options = {
+       method: "GET",
+       headers: {
+          "Content-Type": "application/json",
+       },
+    };
 
-//          console.log(data);
-//       })
-//       .catch((error) => console.error("Error:", error));
-// }
+    fetch("https://localhost:7280/api/v1/news", options)
+       .then((response) => response.json())
+       .then((data) => {
+          let images = data.images;
+          let container = document.getElementById("imageContainer");
+          images.forEach((image) => {s
+             img.src = "data:image/jpeg;base64," + image;
+             container.appendChild(img);
+          });
+
+          console.log(data);
+       })
+       .catch((error) => console.error("Error:", error));
+ }
+*/
 
 export default function NewsPage() {
    // fetch();
