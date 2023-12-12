@@ -1,9 +1,9 @@
 // React imports
-import React from "react";
+import React from "react"
 
 // Style Imports
-import "./componentsUI/SponsorSidebar.css";
-import "./componentsUI/SponsorGrid.css";
+import "./componentsUI/SponsorSidebar.css"
+import "./componentsUI/SponsorGrid.css"
 
 export default function SponsorSidebar() {
   return (
@@ -38,5 +38,5 @@ export default function SponsorSidebar() {
       ></a>
       <a className="sponsor-sidebar__item usv-logo" href="https://usv.ro/"></a>
     </div>
-  );
+  )
 }
