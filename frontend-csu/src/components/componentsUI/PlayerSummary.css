@@ -58,7 +58,7 @@
 /* Player summary top and bottom lines */
 .player-summary__top-line,
 .player-summary__bottom-line {
-   width: 1590px;
+   width: 1200px;
    height: 1px;
    background-color: var(--post_date_color);
    position: absolute;
