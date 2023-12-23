@@ -5,6 +5,7 @@ using CSU.Domain.Users;
 using Microsoft.EntityFrameworkCore;
 
 using System.Reflection;
+using CSU.Domain.Members;
 
 namespace CSU.Infrastructure.Common.Persistence
 {
@@ -27,5 +28,10 @@ namespace CSU.Infrastructure.Common.Persistence
         public DbSet<NewsDomain.Image> Images { get; set; } = null!;
         public DbSet<NewsDomain.Hashtag> Hashtags { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
+        public DbSet<Award> Awards { get; set; } = null!;
+        public DbSet<Championship> Championships { get; set; } = null!;
+        public DbSet<Member> Members { get; set; } = null!;
+        public DbSet<Role> Roles { get; set; } = null!;
+        public DbSet<MemberRole> MembersRoles { get; set; }
     }
 }

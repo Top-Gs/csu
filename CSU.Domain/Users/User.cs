@@ -1,4 +1,6 @@
-﻿namespace CSU.Domain.Users
+﻿using CSU.Domain.Members;
+
+namespace CSU.Domain.Users
 {
     public class User
     {
@@ -9,5 +11,6 @@
         public UserRole Role { get; set; } = null!;
 
         public ICollection<News.News> News { get; } = new List<News.News>();
+        public ICollection<Member> Members { get; } = new List<Member>();
     }
 }
