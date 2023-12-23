@@ -11,7 +11,11 @@ namespace CSU.Application.Mapping
         {
             CreateMap<UserRegistrationRequest, User>()
                 .ForMember(dest => dest.Role, opt =>
-                    opt.MapFrom(src => UserRole.User));
+                    opt.MapFrom(src => UserRole.User))
+                .ForMember(dest => dest.Token, opt =>
+                    opt.MapFrom(src => string.Empty))
+                .ForMember(dest => dest.IsActive, opt =>
+                    opt.MapFrom(src => true));
         }
     }
 }
