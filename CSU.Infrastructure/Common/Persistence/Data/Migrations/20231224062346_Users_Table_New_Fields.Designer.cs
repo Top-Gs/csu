@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 {
     [DbContext(typeof(CsuDbContext))]
-    [Migration("20231223233226_Users_Table_New_Fields")]
+    [Migration("20231224062346_Users_Table_New_Fields")]
     partial class Users_Table_New_Fields
     {
         /// <inheritdoc />
@@ -286,8 +286,7 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 
                     b.Property<string>("Token")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .ValueGeneratedOnAdd()

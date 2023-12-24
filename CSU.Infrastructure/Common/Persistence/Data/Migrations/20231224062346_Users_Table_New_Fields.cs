@@ -28,8 +28,7 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
             migrationBuilder.AddColumn<string>(
                 name: "Token",
                 table: "Users",
-                type: "nvarchar(250)",
-                maxLength: 250,
+                type: "nvarchar(max)",
                 nullable: false,
                 defaultValue: "");
 
