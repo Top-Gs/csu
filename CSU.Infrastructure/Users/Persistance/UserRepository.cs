@@ -24,5 +24,12 @@ namespace CSU.Infrastructure.Users.Persistance
         {
             await _dataContext.Users.AddAsync(user);
         }
+
+        public Task UpdateAsync(User user)
+        {
+            _dataContext.Users.Update(user);
+
+            return Task.CompletedTask;
+        }
     }
 }

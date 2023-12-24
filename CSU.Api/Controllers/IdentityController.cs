@@ -38,5 +38,18 @@ namespace CSU.Api.Controllers
                 return BadRequest("An error occurred");
             }
         }
+
+        [HttpPost(ApiEndpoints.V1.Identity.Login)]
+        public async Task<IActionResult> LoginAsync([FromBody] LoginUserRequest request)
+        {
+            var loginResponse = await _identityService.LoginAsync(request);
+
+            if (loginResponse is null)
+            {
+                return BadRequest("Email or Password incorrect");
+            }
+
+            return Ok(loginResponse);
+        }
     }
 }

@@ -29,9 +29,6 @@ namespace CSU.Infrastructure.Users.Persistance
                     value => UserRole.FromValue(value))
                 .IsRequired();
 
-            builder.Property(n => n.Token)
-                .HasMaxLength(250);
-
             builder.Property(u => u.CreatedAt)
                 .HasDefaultValueSql("GETDATE()");
 
