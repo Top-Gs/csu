@@ -13,6 +13,7 @@
                 private const string Base = $"{VersionBase}/news";
 
                 public const string Create = Base;
+                public const string GetAll = Base;
             }
 
             public static class Identity
