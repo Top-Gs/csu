@@ -2,6 +2,8 @@
 using CSU.Domain.News;
 using CSU.Infrastructure.Common.Persistence;
 
+using Microsoft.EntityFrameworkCore;
+
 namespace CSU.Infrastructure.News.Persistence
 {
     public class NewsRepository : INewsRepository
@@ -16,6 +18,16 @@ namespace CSU.Infrastructure.News.Persistence
         public async Task CreateAsync(Domain.News.News news)
         {
             await _dataContext.News.AddAsync(news);
+        }
+
+        public async Task<List<Domain.News.News>?> GetAllAsync()
+        {
+            var result = await _dataContext.News
+                .Include(n => n.Images)
+                .Include(n => n.Hashtags)
+                .ToListAsync();
+
+            return result;
         }
 
         public async Task AddImages(List<Image> images)

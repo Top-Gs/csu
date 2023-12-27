@@ -45,6 +45,15 @@ namespace CSU.Application.Services
             return response;
         }
 
+        public async Task<List<NewsResponse>?> GetAllAsync()
+        {
+            var news = await _newsRepository.GetAllAsync();
+
+            var newsResponse = _mapper.Map<List<NewsResponse>>(news);
+
+            return newsResponse;
+        }
+
         private async Task<byte[]> ConvertIFormFileToByteArray(IFormFile file)
         {
             using var memoryStream = new MemoryStream();

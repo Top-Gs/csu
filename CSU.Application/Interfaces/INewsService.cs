@@ -6,5 +6,6 @@ namespace CSU.Application.Interfaces
     public interface INewsService
     {
         Task<NewsResponse> CreateAsync(CreateNewsRequest request, Guid userId);
+        Task<List<NewsResponse>?> GetAllAsync();
     }
 }
