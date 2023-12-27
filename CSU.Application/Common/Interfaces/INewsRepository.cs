@@ -6,6 +6,7 @@ namespace CSU.Application.Common.Interfaces
     {
         Task CreateAsync(News news);
         Task<List<News>?> GetAllAsync();
+        Task<News?> GetByIdAsync(Guid id);
         Task AddImages(List<Image> images);
         Task AddHashtags(List<Hashtag> hashtags);
     }

@@ -1,6 +1,4 @@
-﻿using Azure.Core;
-
-using CSU.Api.Extensions;
+﻿using CSU.Api.Extensions;
 using CSU.Application.Interfaces;
 using CSU.Contracts.V1.Requests;
 
@@ -48,6 +46,28 @@ namespace CSU.Api.Controllers
             try
             {
                 var news = await _newsService.GetAllAsync();
+
+                return Ok(news);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred: {ErrorMessage}", ex.Message);
+
+                return BadRequest("An error occurred");
+            }
+        }
+
+        [HttpGet(ApiEndpoints.V1.News.Get)]
+        public async Task<IActionResult> Get([FromRoute] Guid id)
+        {
+            try
+            {
+                var news = await _newsService.GetByIdAsync(id);
+
+                if (news == null)
+                {
+                    return NotFound();
+                }
 
                 return Ok(news);
             }
