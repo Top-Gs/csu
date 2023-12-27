@@ -39,5 +39,14 @@ namespace CSU.Infrastructure.News.Persistence
         {
             await _dataContext.Hashtags.AddRangeAsync(hashtags);
         }
+
+        public async Task<Domain.News.News?> GetByIdAsync(Guid id)
+        {
+            var result = await _dataContext.News
+                .Include(news => news.Images)
+                .SingleOrDefaultAsync(item => item.Id == id);
+
+            return result;
+        }
     }
 }
