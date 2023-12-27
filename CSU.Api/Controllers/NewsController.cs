@@ -78,5 +78,30 @@ namespace CSU.Api.Controllers
                 return BadRequest("An error occurred");
             }
         }
+
+        [HttpPut(ApiEndpoints.V1.News.Update)]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,ContentCreator")]
+        public async Task<IActionResult> Update([FromRoute] Guid id, [FromForm] UpdateNewsRequest request)
+        {
+            try
+            {
+                var userId = new Guid(HttpContext.GetUserId());
+
+                var updatedNews = await _newsService.UpdateAsync(id, request, userId);
+
+                if (updatedNews == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(updatedNews);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred: {ErrorMessage}", ex.Message);
+
+                return BadRequest("An error occurred");
+            }
+        }
     }
 }

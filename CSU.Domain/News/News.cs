@@ -13,7 +13,7 @@ namespace CSU.Domain.News
         public DateTime ModifiedAt { get; set; }
         public Guid ModifiedBy { get; set; }
 
-        public ICollection<Image> Images { get; } = new List<Image>();
+        public ICollection<Image> Images { get; set; } = new List<Image>();
         public List<Hashtag> Hashtags { get; } = new();
         public Guid UserId { get; set; }
         public User User { get; set; } = null!;

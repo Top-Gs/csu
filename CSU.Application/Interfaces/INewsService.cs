@@ -8,5 +8,6 @@ namespace CSU.Application.Interfaces
         Task<NewsResponse> CreateAsync(CreateNewsRequest request, Guid userId);
         Task<List<NewsResponse>?> GetAllAsync();
         Task<NewsResponse?> GetByIdAsync(Guid id);
+        Task<NewsResponse?> UpdateAsync(Guid newsId, UpdateNewsRequest request, Guid userId);
     }
 }

@@ -18,6 +18,7 @@ namespace CSU.Application.Mapping
                 .ForMember(dest => dest.Hashtags, opt => opt.Ignore());
 
             CreateMap<News, NewsResponse>()
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.UserId))
                 .ForMember(dest => dest.State, opt => opt.MapFrom(src => src.State.Name))
                 .ForMember(dest => dest.Images, opt => opt.MapFrom(src => src.Images.Select(w => Convert.ToBase64String(w.ImageData)).ToList()))
                 .ForMember(dest => dest.Hashtags, opt => opt.MapFrom(src => src.Hashtags.Select(w => w.Name)));

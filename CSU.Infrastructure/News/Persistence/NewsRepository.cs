@@ -30,6 +30,24 @@ namespace CSU.Infrastructure.News.Persistence
             return result;
         }
 
+        public async Task<Domain.News.News?> GetByIdAsync(Guid id)
+        {
+            var result = await _dataContext.News
+                .Include(n => n.User)
+                .Include(n => n.Images)
+                .Include(n => n.Hashtags)
+                .SingleOrDefaultAsync(item => item.Id == id);
+
+            return result;
+        }
+
+        public Task UpdateAsync(Domain.News.News news)
+        {
+            _dataContext.News.Update(news);
+
+            return Task.CompletedTask;
+        }
+
         public async Task AddImages(List<Image> images)
         {
             await _dataContext.Images.AddRangeAsync(images);
@@ -40,13 +58,11 @@ namespace CSU.Infrastructure.News.Persistence
             await _dataContext.Hashtags.AddRangeAsync(hashtags);
         }
 
-        public async Task<Domain.News.News?> GetByIdAsync(Guid id)
+        public Task DeleteHashtags(List<Hashtag> hashtags)
         {
-            var result = await _dataContext.News
-                .Include(news => news.Images)
-                .SingleOrDefaultAsync(item => item.Id == id);
+            _dataContext.Hashtags.RemoveRange(hashtags);
 
-            return result;
+            return Task.CompletedTask;
         }
     }
 }
