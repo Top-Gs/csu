@@ -63,6 +63,39 @@ namespace CSU.Application.Services
             return newsResponse;
         }
 
+        public async Task<NewsResponse?> UpdateAsync(Guid newsId, UpdateNewsRequest request, Guid userId)
+        {
+            var news = await _newsRepository.GetByIdAsync(newsId);
+
+            if (news == null)
+            {
+                return null;
+            }
+
+            news.Title = request.Title;
+            news.Description = request.Description;
+            news.State = Domain.News.NewsState.FromValue((int)request.State);
+            news.ScheduledDate = request.ScheduledDate;
+            news.ModifiedBy = userId;
+
+            var imageDataTasks = request.Images.Select(ConvertIFormFileToByteArray);
+            var imageDatas = await Task.WhenAll(imageDataTasks);
+
+            var images = imageDatas.Select((imageData, index) => new Image { ImageData = imageData, News = news }).ToList();
+            var hashtags = request.Hashtags.Select(h => new Hashtag { Name = h, News = new List<News> { news } }).ToList();
+
+            news.Images = images;
+
+            await _newsRepository.UpdateAsync(news);
+            await _newsRepository.DeleteHashtags(news.Hashtags);
+            await _newsRepository.AddHashtags(hashtags);
+            await _unitOfWork.CommitChangesAsync();
+
+            var newsResponse = _mapper.Map<NewsResponse>(news);
+
+            return newsResponse;
+        }
+
         private async Task<byte[]> ConvertIFormFileToByteArray(IFormFile file)
         {
             using var memoryStream = new MemoryStream();
