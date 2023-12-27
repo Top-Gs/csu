@@ -6,13 +6,12 @@ using CSU.Application.Utils;
 using CSU.Contracts.V1.Requests;
 using CSU.Domain.Users;
 
-using System.Runtime.InteropServices;
-using System.Security.Claims;
-using System.Security;
-using System.Text;
-using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace CSU.Application.Services
 {
