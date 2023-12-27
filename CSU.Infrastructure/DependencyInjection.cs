@@ -1,5 +1,6 @@
 ﻿using CSU.Application.Common.Interfaces;
 using CSU.Infrastructure.Common.Persistence;
+using CSU.Infrastructure.News.Persistence;
 using CSU.Infrastructure.Users.Persistance;
 
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,7 @@ namespace CSU.Infrastructure
                 options.UseSqlServer("Server=localhost;Database=CSUSuceava; Trusted_Connection=true;TrustServerCertificate=true;");
             });
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<INewsRepository, NewsRepository>();
             services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<CsuDbContext>());
 
             return services;

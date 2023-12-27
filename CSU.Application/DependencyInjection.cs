@@ -11,7 +11,9 @@ namespace CSU.Application
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddScoped<IIdentityService, IdentityService>();
+            services.AddScoped<INewsService, NewsService>();
             services.AddAutoMapper(typeof(UserProfile));
+            services.AddAutoMapper(typeof(NewsProfile));
 
             return services;
         }
