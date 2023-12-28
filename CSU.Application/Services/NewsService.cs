@@ -32,7 +32,10 @@ namespace CSU.Application.Services
             var imageDatas = await Task.WhenAll(imageDataTasks);
 
             var images = imageDatas.Select((imageData, index) => new Image { ImageData = imageData, News = news }).ToList();
-            var hashtags = request.Hashtags.Select(h => new Hashtag { Name = h, News = new List<News> { news } }).ToList();
+            var hashtags = request.Hashtags
+                .Where(h => !string.IsNullOrEmpty(h))
+                .Select(h => new Hashtag { Name = h, News = new List<News> { news } })
+                .ToList();
 
             await _newsRepository.CreateAsync(news);
             await _newsRepository.AddImages(images);
@@ -82,7 +85,10 @@ namespace CSU.Application.Services
             var imageDatas = await Task.WhenAll(imageDataTasks);
 
             var images = imageDatas.Select((imageData, index) => new Image { ImageData = imageData, News = news }).ToList();
-            var hashtags = request.Hashtags.Select(h => new Hashtag { Name = h, News = new List<News> { news } }).ToList();
+            var hashtags = request.Hashtags
+               .Where(h => !string.IsNullOrEmpty(h))
+               .Select(h => new Hashtag { Name = h, News = new List<News> { news } })
+               .ToList();
 
             news.Images = images;
 
@@ -100,7 +106,7 @@ namespace CSU.Application.Services
         {
             var news = await _newsRepository.GetByIdAsync(id);
 
-            if (news == null || news.State == Domain.News.NewsState.Canceled)
+            if (news == null)
             {
                 return false;
             }

@@ -23,6 +23,7 @@ namespace CSU.Infrastructure.News.Persistence
         public async Task<List<Domain.News.News>?> GetAllAsync()
         {
             var result = await _dataContext.News
+                .Include(n => n.User)
                 .Include(n => n.Images)
                 .Include(n => n.Hashtags)
                 .ToListAsync();
@@ -36,6 +37,7 @@ namespace CSU.Infrastructure.News.Persistence
                 .Include(n => n.User)
                 .Include(n => n.Images)
                 .Include(n => n.Hashtags)
+                .Where(n => n.State != NewsState.Canceled)
                 .SingleOrDefaultAsync(item => item.Id == id);
 
             return result;
