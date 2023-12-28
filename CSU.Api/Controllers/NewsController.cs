@@ -103,5 +103,23 @@ namespace CSU.Api.Controllers
                 return BadRequest("An error occurred");
             }
         }
+
+        [HttpDelete(ApiEndpoints.V1.News.Delete)]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,ContentCreator")]
+        public async Task<IActionResult> Delete([FromRoute] Guid id)
+        {
+            try
+            {
+                var deleted = await _newsService.DeleteByIdAsync(id);
+
+                return deleted ? NoContent() : NotFound();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred: {ErrorMessage}", ex.Message);
+
+                return BadRequest("An error occurred");
+            }
+        }
     }
 }
