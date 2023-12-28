@@ -1,6 +1,4 @@
-﻿using Azure;
-
-using CSU.Api.Extensions;
+﻿using CSU.Api.Extensions;
 using CSU.Application.Interfaces;
 using CSU.Contracts.V1.Requests;
 
