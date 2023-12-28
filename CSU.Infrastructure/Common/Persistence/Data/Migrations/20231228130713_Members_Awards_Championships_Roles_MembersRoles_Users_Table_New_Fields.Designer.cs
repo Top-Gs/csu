@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 {
     [DbContext(typeof(CsuDbContext))]
-    [Migration("20231224062346_Users_Table_New_Fields")]
-    partial class Users_Table_New_Fields
+    [Migration("20231228130713_Members_Awards_Championships_Roles_MembersRoles_Users_Table_New_Fields")]
+    partial class Members_Awards_Championships_Roles_MembersRoles_Users_Table_New_Fields
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -117,9 +117,9 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<string>("ProfileImage")
+                    b.Property<byte[]>("ProfileImage")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<int>("Type")
                         .HasColumnType("int");

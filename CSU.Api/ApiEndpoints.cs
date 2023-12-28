@@ -19,6 +19,14 @@
                 public const string Delete = $"{Base}/{{id:guid}}";
             }
 
+            public static class Member
+            {
+                private const string Base = $"{VersionBase}/members";
+
+                public const string Create = Base;
+                public const string Get = $"{Base}/{{id:guid}}";
+            }
+
             public static class Identity
             {
                 private const string Base = $"{VersionBase}/identity";

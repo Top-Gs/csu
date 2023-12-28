@@ -12,6 +12,7 @@ namespace CSU.Application
         {
             services.AddScoped<IIdentityService, IdentityService>();
             services.AddScoped<INewsService, NewsService>();
+            services.AddScoped<IMemberService, MemberService>();
             services.AddAutoMapper(typeof(UserProfile));
             services.AddAutoMapper(typeof(NewsProfile));
 
