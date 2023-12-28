@@ -9,5 +9,6 @@ namespace CSU.Application.Interfaces
         Task<List<NewsResponse>?> GetAllAsync();
         Task<NewsResponse?> GetByIdAsync(Guid id);
         Task<NewsResponse?> UpdateAsync(Guid newsId, UpdateNewsRequest request, Guid userId);
+        Task<bool> DeleteByIdAsync(Guid id);
     }
 }

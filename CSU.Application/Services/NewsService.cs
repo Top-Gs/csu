@@ -96,6 +96,23 @@ namespace CSU.Application.Services
             return newsResponse;
         }
 
+        public async Task<bool> DeleteByIdAsync(Guid id)
+        {
+            var news = await _newsRepository.GetByIdAsync(id);
+
+            if (news == null || news.State == Domain.News.NewsState.Canceled)
+            {
+                return false;
+            }
+
+            news.State = Domain.News.NewsState.Canceled;
+
+            await _newsRepository.UpdateAsync(news);
+            await _unitOfWork.CommitChangesAsync();
+
+            return true;
+        }
+
         private async Task<byte[]> ConvertIFormFileToByteArray(IFormFile file)
         {
             using var memoryStream = new MemoryStream();
