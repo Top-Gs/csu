@@ -5,8 +5,8 @@ namespace CSU.Domain.Members
     public class Member
     {
         public Guid Id { get; set; }
-        public MType Type { get; set; } = null!;
-        public string ProfileImage { get; set; } = null!;
+        public MemberType Type { get; set; } = null!;
+        public byte[] ProfileImage { get; set; } = null!;
         public string Position { get; set; } = null!;
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;

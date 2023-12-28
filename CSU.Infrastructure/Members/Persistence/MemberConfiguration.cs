@@ -14,7 +14,7 @@ namespace CSU.Infrastructure.Members.Persistence
             builder.Property(m => m.Type)
                 .HasConversion(
                     mtype => mtype.Value,
-                    value => MType.FromValue(value))
+                    value => MemberType.FromValue(value))
                 .IsRequired();
 
             builder.Property(m => m.Position)
