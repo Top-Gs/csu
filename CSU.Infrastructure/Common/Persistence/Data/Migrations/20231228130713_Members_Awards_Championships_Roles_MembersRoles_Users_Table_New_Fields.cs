@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class Members_Awards_Championships_Roles_MembersRoles : Migration
+    public partial class Members_Awards_Championships_Roles_MembersRoles_Users_Table_New_Fields : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -14,6 +14,34 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
             migrationBuilder.DropColumn(
                 name: "CreatedBy",
                 table: "News");
+
+            migrationBuilder.AddColumn<DateTime>(
+                name: "CreatedAt",
+                table: "Users",
+                type: "datetime2",
+                nullable: false,
+                defaultValueSql: "GETDATE()");
+
+            migrationBuilder.AddColumn<bool>(
+                name: "IsActive",
+                table: "Users",
+                type: "bit",
+                nullable: false,
+                defaultValue: false);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Token",
+                table: "Users",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<DateTime>(
+                name: "UpdatedAt",
+                table: "Users",
+                type: "datetime2",
+                nullable: false,
+                defaultValueSql: "GETDATE()");
 
             migrationBuilder.CreateTable(
                 name: "Championships",
@@ -33,7 +61,7 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Type = table.Column<int>(type: "int", nullable: false),
-                    ProfileImage = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProfileImage = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     Position = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
@@ -212,6 +240,22 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Championships");
+
+            migrationBuilder.DropColumn(
+                name: "CreatedAt",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "IsActive",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "Token",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "UpdatedAt",
+                table: "Users");
 
             migrationBuilder.AddColumn<Guid>(
                 name: "CreatedBy",

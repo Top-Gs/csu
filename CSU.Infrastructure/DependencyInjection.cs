@@ -1,5 +1,6 @@
 ﻿using CSU.Application.Common.Interfaces;
 using CSU.Infrastructure.Common.Persistence;
+using CSU.Infrastructure.Members.Persistence;
 using CSU.Infrastructure.News.Persistence;
 using CSU.Infrastructure.Users.Persistance;
 
@@ -18,6 +19,7 @@ namespace CSU.Infrastructure
             });
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<INewsRepository, NewsRepository>();
+            services.AddScoped<IMemberRepository, MemberRepository>();
             services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<CsuDbContext>());
 
             return services;
