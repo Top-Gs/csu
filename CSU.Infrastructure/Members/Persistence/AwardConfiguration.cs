@@ -18,13 +18,16 @@ namespace CSU.Infrastructure.Members.Persistence
             builder.Property(a => a.Place)
                 .IsRequired();
 
-            builder.Property(a => a.TeamAward)
-                .IsRequired();
+            builder.Property(a => a.Championship)
+                .HasMaxLength(250);
+
+            builder.Property(a => a.Date)
+                .HasDefaultValueSql("GETDATE()");
 
             builder
-                .HasOne(a => a.Championship)
+                .HasOne(a => a.Member)
                 .WithMany(a => a.Awards)
-                .HasForeignKey(a => a.ChampionshipId)
+                .HasForeignKey(a => a.MemberId)
                 .IsRequired();
         }
     }

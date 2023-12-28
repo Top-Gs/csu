@@ -6,6 +6,7 @@ namespace CSU.Contracts.V1.Requests
     {
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
+        public string Championship { get; set; } = null!;
         public string Description { get; set; } = null!;
         public MemberType Type { get; set; }
         public IFormFile ProfileImage { get; set; } = null!;

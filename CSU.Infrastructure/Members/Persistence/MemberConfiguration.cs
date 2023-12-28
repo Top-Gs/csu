@@ -53,26 +53,16 @@ namespace CSU.Infrastructure.Members.Persistence
                 .IsRequired();
 
             builder
-                .HasMany(a => a.Awards)
-                .WithMany(m => m.Members)
-                .UsingEntity(
-                    "MembersAwards",
-                    l => l.HasOne(typeof(Award)).WithMany().HasForeignKey("AwardId").HasPrincipalKey(nameof(Award.Id)),
-                    r => r.HasOne(typeof(Member)).WithMany().HasForeignKey("MemberId").HasPrincipalKey(nameof(Member.Id)),
-                    j => j.HasKey("MemberId", "AwardId"));
-
-            builder.HasMany(r => r.Roles)
-                .WithMany(m => m.Members)
-                .UsingEntity<MemberRole>(j => j.Property(e => e.CreatedAt).HasDefaultValueSql("getutcdate()"));
+                .HasMany(e => e.Awards)
+                .WithOne(e => e.Member)
+                .HasForeignKey(e => e.MemberId)
+                .IsRequired();
 
             builder
-                .HasMany(c => c.Championships)
-                .WithMany(m => m.Members)
-                .UsingEntity(
-                    "MembersChampionships",
-                    l => l.HasOne(typeof(Championship)).WithMany().HasForeignKey("ChampionshipId").HasPrincipalKey(nameof(Championship.Id)),
-                    r => r.HasOne(typeof(Member)).WithMany().HasForeignKey("MemberId").HasPrincipalKey(nameof(Member.Id)),
-                    j => j.HasKey("MemberId", "ChampionshipId"));
+                .HasMany(e => e.Roles)
+                .WithOne(e => e.Member)
+                .HasForeignKey(e => e.MemberId)
+                .IsRequired();
         }
     }
 }

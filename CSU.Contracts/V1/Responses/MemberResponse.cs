@@ -7,6 +7,7 @@ namespace CSU.Contracts.V1.Responses
         public Guid Id { get; set; }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
+        public string Championship { get; set; } = null!;
         public string Description { get; set; } = string.Empty;
         public MemberType Type { get; set; }
         public string ProfileImage { get; set; } = null!;

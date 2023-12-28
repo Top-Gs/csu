@@ -28,7 +28,17 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ChampionshipId")
+                    b.Property<string>("Championship")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<DateTime>("Date")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<Guid>("MemberId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
@@ -39,30 +49,11 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                     b.Property<int>("Place")
                         .HasColumnType("int");
 
-                    b.Property<bool>("TeamAward")
-                        .HasColumnType("bit");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("ChampionshipId");
+                    b.HasIndex("MemberId");
 
                     b.ToTable("Awards");
-                });
-
-            modelBuilder.Entity("CSU.Domain.Members.Championship", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Championships");
                 });
 
             modelBuilder.Entity("CSU.Domain.Members.Member", b =>
@@ -73,6 +64,10 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Championship")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -133,28 +128,16 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 
             modelBuilder.Entity("CSU.Domain.Members.MemberRole", b =>
                 {
-                    b.Property<Guid>("MemberId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("RoleId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("getutcdate()");
-
-                    b.HasKey("MemberId", "RoleId");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("MembersRoles");
-                });
-
-            modelBuilder.Entity("CSU.Domain.Members.Role", b =>
-                {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("Date")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<Guid>("MemberId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
@@ -164,7 +147,9 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.HasIndex("MemberId");
+
+                    b.ToTable("MemberRoles");
                 });
 
             modelBuilder.Entity("CSU.Domain.News.Hashtag", b =>
@@ -295,36 +280,6 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("MembersAwards", b =>
-                {
-                    b.Property<Guid>("MemberId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("AwardId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("MemberId", "AwardId");
-
-                    b.HasIndex("AwardId");
-
-                    b.ToTable("MembersAwards");
-                });
-
-            modelBuilder.Entity("MembersChampionships", b =>
-                {
-                    b.Property<Guid>("MemberId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ChampionshipId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("MemberId", "ChampionshipId");
-
-                    b.HasIndex("ChampionshipId");
-
-                    b.ToTable("MembersChampionships");
-                });
-
             modelBuilder.Entity("NewsHashtag", b =>
                 {
                     b.Property<Guid>("NewsId")
@@ -342,13 +297,13 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 
             modelBuilder.Entity("CSU.Domain.Members.Award", b =>
                 {
-                    b.HasOne("CSU.Domain.Members.Championship", "Championship")
+                    b.HasOne("CSU.Domain.Members.Member", "Member")
                         .WithMany("Awards")
-                        .HasForeignKey("ChampionshipId")
+                        .HasForeignKey("MemberId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Championship");
+                    b.Navigation("Member");
                 });
 
             modelBuilder.Entity("CSU.Domain.Members.Member", b =>
@@ -364,17 +319,13 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 
             modelBuilder.Entity("CSU.Domain.Members.MemberRole", b =>
                 {
-                    b.HasOne("CSU.Domain.Members.Member", null)
-                        .WithMany()
+                    b.HasOne("CSU.Domain.Members.Member", "Member")
+                        .WithMany("Roles")
                         .HasForeignKey("MemberId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CSU.Domain.Members.Role", null)
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Member");
                 });
 
             modelBuilder.Entity("CSU.Domain.News.Image", b =>
@@ -399,36 +350,6 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("MembersAwards", b =>
-                {
-                    b.HasOne("CSU.Domain.Members.Award", null)
-                        .WithMany()
-                        .HasForeignKey("AwardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CSU.Domain.Members.Member", null)
-                        .WithMany()
-                        .HasForeignKey("MemberId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("MembersChampionships", b =>
-                {
-                    b.HasOne("CSU.Domain.Members.Championship", null)
-                        .WithMany()
-                        .HasForeignKey("ChampionshipId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CSU.Domain.Members.Member", null)
-                        .WithMany()
-                        .HasForeignKey("MemberId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("NewsHashtag", b =>
                 {
                     b.HasOne("CSU.Domain.News.Hashtag", null)
@@ -444,9 +365,11 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CSU.Domain.Members.Championship", b =>
+            modelBuilder.Entity("CSU.Domain.Members.Member", b =>
                 {
                     b.Navigation("Awards");
+
+                    b.Navigation("Roles");
                 });
 
             modelBuilder.Entity("CSU.Domain.News.News", b =>

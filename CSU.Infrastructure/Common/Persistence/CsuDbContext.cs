@@ -29,9 +29,7 @@ namespace CSU.Infrastructure.Common.Persistence
         public DbSet<NewsDomain.Hashtag> Hashtags { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Award> Awards { get; set; } = null!;
-        public DbSet<Championship> Championships { get; set; } = null!;
         public DbSet<Member> Members { get; set; } = null!;
-        public DbSet<Role> Roles { get; set; } = null!;
-        public DbSet<MemberRole> MembersRoles { get; set; }
+        public DbSet<MemberRole> MemberRoles { get; set; } = null!;
     }
 }

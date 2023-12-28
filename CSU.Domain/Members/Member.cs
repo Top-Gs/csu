@@ -5,11 +5,12 @@ namespace CSU.Domain.Members
     public class Member
     {
         public Guid Id { get; set; }
-        public MemberType Type { get; set; } = null!;
-        public byte[] ProfileImage { get; set; } = null!;
-        public string Position { get; set; } = null!;
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
+        public byte[] ProfileImage { get; set; } = null!;
+        public MemberType Type { get; set; } = null!;
+        public string Championship { get; set; } = null!;
+        public string Position { get; set; } = null!;
         public string Nationality { get; set; } = null!;
         public DateTime BirthDate { get; set; }
         public Double Height { get; set; }
@@ -20,8 +21,7 @@ namespace CSU.Domain.Members
 
         public Guid UserId { get; set; }
         public User User { get; set; } = null!;
-        public List<Award> Awards { get; } = new();
-        public List<Role> Roles { get; } = new();
-        public List<Championship> Championships { get; } = new();
+        public ICollection<Award> Awards { get; } = new List<Award>();
+        public ICollection<MemberRole> Roles { get; } = new List<MemberRole>();
     }
 }
