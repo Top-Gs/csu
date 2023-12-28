@@ -29,6 +29,13 @@
 
                 public const string RefreshToken = $"{Base}/refresh";
             }
+
+            public static class Hashtags
+            {
+                private const string Base = $"{VersionBase}/hashtags";
+
+                public const string GetAll = Base;
+            }
         }
     }
 }

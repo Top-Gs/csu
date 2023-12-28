@@ -18,6 +18,7 @@ namespace CSU.Infrastructure
             });
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<INewsRepository, NewsRepository>();
+            services.AddScoped<IHashtagRepository, HashtagRepository>();
             services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<CsuDbContext>());
 
             return services;
