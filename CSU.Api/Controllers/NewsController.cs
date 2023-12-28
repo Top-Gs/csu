@@ -1,4 +1,6 @@
-﻿using CSU.Api.Extensions;
+﻿using Azure;
+
+using CSU.Api.Extensions;
 using CSU.Application.Interfaces;
 using CSU.Contracts.V1.Requests;
 
@@ -30,7 +32,7 @@ namespace CSU.Api.Controllers
 
                 var news = await _newsService.CreateAsync(request, userId);
 
-                return Ok(news);
+                return CreatedAtAction(nameof(Get), new { id = news.Id }, news);
             }
             catch (Exception ex)
             {
