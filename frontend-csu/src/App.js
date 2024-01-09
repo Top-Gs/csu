@@ -1,18 +1,18 @@
 // React Imports
-import React from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Admin components imports
-import AdminLayout from "./adminComponents/AdminLayout"
-import AdminDashboard from "./adminComponents/AdminDashboard"
-import NewsAdm from "./adminComponents/NewsAdm"
+import AdminLayout from "./adminComponents/AdminLayout";
+import AdminDashboard from "./adminComponents/AdminDashboard";
+import NewsAdm from "./adminComponents/NewsAdm";
 
 // Pages imports
-import NewsPage from "./pages/NewsPage"
-import SingleNewsPage from "./pages/SingleNewsPage"
-import Sponsors from "./pages/Sponsors"
-import AboutUs from "./pages/AboutUs"
-import PlayerProfile from "./pages/PlayerProfile"
+import NewsPage from "./components/NewsPage";
+import SingleNewsPage from "./pages/SingleNewsPage";
+import Sponsors from "./pages/Sponsors";
+import AboutUs from "./pages/AboutUs";
+import PlayerProfile from "./pages/PlayerProfile";
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
         </Routes>
       </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
