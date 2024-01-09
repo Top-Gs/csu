@@ -2,71 +2,72 @@
 
 /* The primary container */
 .news-card-container {
-   background-color: var(--page_background_accent);
-   width: 420px;
-   height: 520px;
-   display: flex;
-   flex-flow: column nowrap;
-   transition: all 300ms;
+  background-color: var(--page_background_accent);
+  width: 420px;
+  height: 520px;
+  display: flex;
+  flex-flow: column nowrap;
+  transition: all 300ms;
 }
 
 .news-card-container:hover {
-   transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* The news card elements */
 
 .news-card__image {
-   background: url("../../res/images/image.jpg") no-repeat center;
-   background-size: cover;
-   width: 420px;
-   height: 364px;
-   margin-bottom: 10px;
-   box-shadow: 0 5px 10px -1px var(--shadow_color);
+  /* background: url("../../res/images/image.jpg") no-repeat center;
+   background-size: cover; */
+  object-fit: cover;
+  width: 420px;
+  height: 364px;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 10px -1px var(--shadow_color);
 }
 
 .news-card-summary-items {
-   display: flex;
-   gap: 12px;
-   padding: 0 4px;
+  display: flex;
+  gap: 12px;
+  padding: 0 4px;
 }
 
 .hashtag,
 .post-date,
 .divider {
-   font-size: 11px;
-   font-family: "Poppins";
+  font-size: 11px;
+  font-family: "Poppins";
 }
 .hashtag,
 .divider {
-   color: var(--hashtag_color);
+  color: var(--hashtag_color);
 }
 .post-date {
-   color: var(--post_date_color);
+  color: var(--post_date_color);
 }
 
 .news-card-text {
-   display: flex;
-   flex-flow: column nowrap;
+  display: flex;
+  flex-flow: column nowrap;
 }
 .news-card-text__title {
-   font-family: "Poppins";
-   font-size: 18px;
-   padding: 0 4px;
+  font-family: "Poppins";
+  font-size: 18px;
+  padding: 0 4px;
 }
 .news-card-text__headline {
-   font-family: "Poppins";
-   font-size: 14px;
-   padding: 0 4px;
+  font-family: "Poppins";
+  font-size: 14px;
+  padding: 0 4px;
 }
 .news-card__link {
-   text-decoration: none;
-   font-family: "Poppins";
-   font-size: 11px;
-   text-align: center;
-   margin-top: 24px;
-   padding: 8px;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 11px;
+  text-align: center;
+  margin-top: 24px;
+  padding: 8px;
 }
 .news-card__link:hover {
-   cursor: pointer;
+  cursor: pointer;
 }
