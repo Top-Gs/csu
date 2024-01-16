@@ -37,6 +37,16 @@
 
                 public const string RefreshToken = $"{Base}/refresh";
             }
+            public static class Sponsors
+            {
+                private const string Base = $"{VersionBase}/sponsors";
+
+                public const string Create = Base;
+                public const string GetAll = Base;
+                public const string Get = $"{Base}/{{id:guid}}";
+                public const string Update = $"{Base}/{{id:guid}}";
+                public const string Delete = $"{Base}/{{id:guid}}";
+            }
         }
     }
 }

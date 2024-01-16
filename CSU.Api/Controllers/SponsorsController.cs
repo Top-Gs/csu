@@ -1,37 +1,39 @@
 ﻿using CSU.Api.Extensions;
+using CSU.Application.Common.Interfaces;
 using CSU.Application.Interfaces;
+using CSU.Application.Services;
 using CSU.Contracts.V1.Requests;
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using System.Net.Security;
 namespace CSU.Api.Controllers
+
 {
     [ApiController]
-    public class NewsController : ControllerBase
+    public class SponsorsController : ControllerBase
     {
-        private readonly INewsService _newsService;
+        private readonly ISponsorsService _sponsorsService;
         private readonly ILogger _logger;
-
-        public NewsController(INewsService newsService, ILogger<NewsController> logger)
+        public SponsorsController(ISponsorsService SponsorsService, ILogger<SponsorsController> logger)
         {
-            _newsService = newsService;
+            _sponsorsService = SponsorsService;
             _logger = logger;
         }
 
-        [HttpPost(ApiEndpoints.V1.News.Create)]
+        [HttpPost(ApiEndpoints.V1.Sponsors.Create)]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,ContentCreator")]
-        public async Task<IActionResult> Create([FromForm] CreateNewsRequest request)
+        public async Task<IActionResult> Create([FromForm] CreateSponsorsRequest request)
         {
             try
             {
-                
-               var userId = new Guid(HttpContext.GetUserId());
 
-                var news = await _newsService.CreateAsync(request, userId);
+                var userId = new Guid(HttpContext.GetUserId());
 
-                return CreatedAtAction(nameof(Get), new { id = news.Id }, news);
+                var sponsors = await _sponsorsService.CreateAsync(request, userId);
+
+                return CreatedAtAction(nameof(Get), new { id = sponsors.Id }, sponsors);
             }
             catch (Exception ex)
             {
@@ -40,13 +42,12 @@ namespace CSU.Api.Controllers
                 return BadRequest("An error occurred");
             }
         }
-
-        [HttpGet(ApiEndpoints.V1.News.GetAll)]
+        [HttpGet(ApiEndpoints.V1.Sponsors.GetAll)]
         public async Task<IActionResult> GetAll()
         {
             try
             {
-                var news = await _newsService.GetAllAsync();
+                var news = await _sponsorsService.GetAllAsync();
 
                 return Ok(news);
             }
@@ -57,20 +58,19 @@ namespace CSU.Api.Controllers
                 return BadRequest("An error occurred");
             }
         }
-
-        [HttpGet(ApiEndpoints.V1.News.Get)]
+        [HttpGet(ApiEndpoints.V1.Sponsors.Get)]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {
             try
             {
-                var news = await _newsService.GetByIdAsync(id);
+                var sponsors = await _sponsorsService.GetByIdAsync(id);
 
-                if (news == null)
+                if (sponsors == null)
                 {
                     return NotFound();
                 }
 
-                return Ok(news);
+                return Ok(sponsors);
             }
             catch (Exception ex)
             {
@@ -80,38 +80,13 @@ namespace CSU.Api.Controllers
             }
         }
 
-        [HttpPut(ApiEndpoints.V1.News.Update)]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,ContentCreator")]
-        public async Task<IActionResult> Update([FromRoute] Guid id, [FromForm] UpdateNewsRequest request)
-        {
-            try
-            {
-                var userId = new Guid(HttpContext.GetUserId());
-
-                var updatedNews = await _newsService.UpdateAsync(id, request, userId);
-
-                if (updatedNews == null)
-                {
-                    return NotFound();
-                }
-
-                return Ok(updatedNews);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred: {ErrorMessage}", ex.Message);
-
-                return BadRequest("An error occurred");
-            }
-        }
-
-        [HttpDelete(ApiEndpoints.V1.News.Delete)]
+        [HttpDelete(ApiEndpoints.V1.Sponsors.Delete)]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,ContentCreator")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             try
             {
-                var deleted = await _newsService.DeleteByIdAsync(id);
+                var deleted = await _sponsorsService.DeleteByIdAsync(id);
 
                 return deleted ? NoContent() : NotFound();
             }
@@ -122,5 +97,7 @@ namespace CSU.Api.Controllers
                 return BadRequest("An error occurred");
             }
         }
+
+
     }
 }

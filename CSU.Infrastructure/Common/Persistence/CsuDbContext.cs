@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 using System.Reflection;
 using CSU.Domain.Members;
+using SponsorsDomain = CSU.Domain.Sponsors;
 
 namespace CSU.Infrastructure.Common.Persistence
 {
@@ -25,6 +26,8 @@ namespace CSU.Infrastructure.Common.Persistence
         }
 
         public DbSet<NewsDomain.News> News { get; set; } = null!;
+
+        public DbSet<SponsorsDomain.Sponsors> Sponsors { get; set; } = null!;
         public DbSet<NewsDomain.Image> Images { get; set; } = null!;
         public DbSet<NewsDomain.Hashtag> Hashtags { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
