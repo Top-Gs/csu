@@ -1,0 +1,97 @@
+:root {
+   --card-gradient-1: #c4c4f7;
+   --card-gradient-2: #dcf8ff;
+   --card-accent: #3e4095;
+   --card-txt-clr: #000000;
+}
+
+.logincard-container {
+   width: 450px;
+   height: 650px;
+   background: linear-gradient(to bottom, var(--card-gradient-1), var(--card-gradient-2));
+   border-radius: 70px;
+   border: 1px solid var(--card-gradient-1);
+   box-shadow: inset 0 4px 5px #8080805f;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   place-content: center;
+   user-select: none;
+}
+
+.logincard__form {
+   margin-top: 96px;
+   width: 300px;
+   justify-self: center;
+   align-self: center;
+}
+
+#logincard__email {
+   height: 35px;
+   background: url("../../res/icons/icons8-email-100.png") left/contain no-repeat;
+   background-size: 30px;
+   padding-left: 48px;
+   border: none;
+   border-bottom: 1px solid black;
+   margin-bottom: 60px;
+}
+
+#logincard__password {
+   height: 35px;
+   background: url("../../res/icons/icons8-password-50.png") left/contain no-repeat;
+   background-size: 23px;
+   padding-left: 48px;
+   padding-left: 48px;
+   border: none;
+   border-bottom: 1px solid black;
+   margin-bottom: 60px;
+}
+.logincard__remember {
+   display: flex;
+   gap: 12px;
+   margin-bottom: 48px;
+}
+.logincard__remember label {
+   font-size: 12px;
+}
+#logincard__checkbox {
+   width: 20px;
+}
+
+.login-cta {
+   z-index: 1;
+   width: 100%;
+   height: 50px;
+   border-radius: 12px;
+   border: none;
+   background-color: var(--card-accent);
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 14px;
+   font-weight: 500;
+   transition: all 300ms;
+   position: relative;
+}
+.login-cta:hover {
+   color: var(--card-accent);
+   cursor: pointer;
+}
+.login-cta::before {
+   z-index: -1;
+   position: absolute;
+   content: "";
+   border-radius: 12px;
+   width: 0%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   transition: all 300ms;
+}
+
+.login-cta:hover::before {
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #fff;
+   transition: all 300ms;
+}
