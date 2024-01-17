@@ -13,7 +13,7 @@ export default function NewsPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://localhost:7280/api/v1/news");
+        const response = await fetch("https://localhost:7219/api/v1/news");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -40,6 +40,7 @@ export default function NewsPage() {
             description={newsData[newsData.length - 1].description}
             images={newsData[newsData.length - 1].images}
             createdAt={newsData[newsData.length - 1].createdAt}
+            hashtags={newsData[newsData.length - 1].hashtags}
           />
         )}
 
@@ -54,6 +55,7 @@ export default function NewsPage() {
                 description={newsItem?.description.slice(0, 20) + ".."}
                 images={newsItem?.images}
                 createdAt={newsItem?.createdAt}
+                hashtags={newsItem?.hashtags}
               />
             ))}
         </section>

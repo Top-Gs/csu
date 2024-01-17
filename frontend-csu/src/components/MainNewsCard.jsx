@@ -9,6 +9,7 @@ export default function MainNewsCard({
   description,
   images,
   createdAt,
+  hashtags,
 }) {
   const date = new Date(createdAt);
   return (
@@ -21,7 +22,7 @@ export default function MainNewsCard({
       )}
       <div className="mnc-content">
         <div className="mnc-summary__items">
-          <p className="mnc-summary-items__item hashtag">Main Team</p>
+          <p className="mnc-summary-items__item hashtag">{hashtags}</p>
           <p className="mnc-summary-items__item divider"> | </p>
           <p className="mnc-summary-items__item post-date">
             {date.toDateString()}
@@ -44,4 +45,5 @@ MainNewsCard.propTypes = {
   description: PropTypes.string.isRequired,
   images: PropTypes.any,
   createdAt: PropTypes.string,
+  hashtags: PropTypes.string,
 };

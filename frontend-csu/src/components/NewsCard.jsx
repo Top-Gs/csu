@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./componentsUI/NewsCard.css";
 
-export const NewsCard = ({ title, description, images, createdAt }) => {
+export const NewsCard = ({
+  title,
+  description,
+  images,
+  createdAt,
+  hashtags,
+}) => {
   const date = new Date(createdAt);
   return (
     <figure className="news-card-container">
@@ -13,7 +19,7 @@ export const NewsCard = ({ title, description, images, createdAt }) => {
         src={`data:image/jpeg;base64, ${images[0]}`}
       />
       <div className="news-card-summary-items">
-        <p className="news-card-summary-items__item hashtag">Juvenil</p>
+        <p className="news-card-summary-items__item hashtag">{hashtags}</p>
         <p className="news-card-summary-items__item divider"> | </p>
         <p className="news-card-summary-items__item post-date">
           {date.toDateString()}
@@ -35,6 +41,7 @@ NewsCard.propTypes = {
   description: PropTypes.string.isRequired,
   images: PropTypes.any,
   createdAt: PropTypes.string,
+  hashtags: PropTypes.string,
 };
 
 export default NewsCard;
