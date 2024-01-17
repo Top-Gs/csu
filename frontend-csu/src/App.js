@@ -14,6 +14,7 @@ import Sponsors from "./pages/Sponsors";
 import AboutUs from "./pages/AboutUs";
 import PlayerProfile from "./pages/PlayerProfile";
 import { LoginPage } from "./pages/LoginPage";
+import { RegisterPage } from "./pages/RegisterPage";
 
 function App() {
    return (
@@ -28,6 +29,7 @@ function App() {
                <Route path="/aboutus" element={<AboutUs />} />
                <Route path="/singlenews" element={<SingleNewsPage />} />
                <Route path="/login" element={<LoginPage />} />
+               <Route path="/register" element={<RegisterPage />} />
                {/* Admin Routes */}
                <Route path="/admin/*" element={<AdminLayout />}>
                   <Route index element={<AdminDashboard />} />
