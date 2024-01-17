@@ -1,0 +1,13 @@
+.registerpage-container {
+   height: 100vh;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   place-content: center;
+   background-color: #ddf9ff;
+   padding: 128px;
+}
+.csu-logo {
+   transform: scale(0.75);
+   align-self: center;
+   justify-self: center;
+}
