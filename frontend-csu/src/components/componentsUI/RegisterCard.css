@@ -1,0 +1,76 @@
+.registercard__form {
+   margin-top: 96px;
+   width: 300px;
+   justify-self: center;
+   align-self: center;
+}
+
+#registercard__email {
+   height: 35px;
+   background: url("../../res/icons/icons8-email-100.png") left/contain no-repeat;
+   background-size: 30px;
+   padding-left: 48px;
+   border: none;
+   border-bottom: 1px solid black;
+   margin-bottom: 60px;
+}
+
+#registercard__password {
+   height: 35px;
+   background: url("../../res/icons/icons8-password-50.png") left/contain no-repeat;
+   background-size: 23px;
+   padding-left: 48px;
+   padding-left: 48px;
+   border: none;
+   border-bottom: 1px solid black;
+   margin-bottom: 60px;
+}
+.registercard__remember {
+   display: flex;
+   gap: 12px;
+   margin-bottom: 48px;
+}
+.registercard__remember label {
+   font-size: 12px;
+}
+#registercard__checkbox {
+   width: 20px;
+}
+
+.register-cta {
+   z-index: 1;
+   width: 100%;
+   height: 50px;
+   border-radius: 12px;
+   border: none;
+   background-color: var(--card-accent);
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 14px;
+   font-weight: 500;
+   transition: all 300ms;
+   position: relative;
+}
+.register-cta:hover {
+   color: var(--card-accent);
+   cursor: pointer;
+}
+.register-cta::before {
+   z-index: -1;
+   position: absolute;
+   content: "";
+   border-radius: 12px;
+   width: 0%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   transition: all 300ms;
+}
+
+.register-cta:hover::before {
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #fff;
+   transition: all 300ms;
+}
