@@ -8,7 +8,7 @@ export const RegisterPage = () => {
   return (
     <div className='registerpage-container'>
         <RegisterCard/>
-        <img src={logo} alt="csu-logo" className='csu-logo'/>        
+        <img src={logo} alt="csu-logo" className='csu-logo-register'/>        
     </div>
   )
 }
