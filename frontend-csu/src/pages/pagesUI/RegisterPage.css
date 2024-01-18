@@ -5,9 +5,10 @@
    place-content: center;
    background-color: #ddf9ff;
    padding: 128px;
+   justify-items: center;
 }
 .csu-logo {
    transform: scale(0.75);
    align-self: center;
-   justify-self: center;
+   justify-self: start;
 }

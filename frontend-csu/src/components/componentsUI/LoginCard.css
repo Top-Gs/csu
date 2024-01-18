@@ -84,13 +84,13 @@
    width: 0%;
    height: 100%;
    top: 0;
-   right: 0;
+   right: 150px;
    transition: all 300ms;
 }
 
 .login-cta:hover::before {
    top: 0;
-   left: 0;
+   right: 0;
    width: 100%;
    background-color: #fff;
    transition: all 300ms;
