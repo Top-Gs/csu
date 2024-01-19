@@ -1,0 +1,6 @@
+.slider__track {
+   width: 1000px;
+   display: flex;
+   overflow: auto;
+   gap: 64px;
+}

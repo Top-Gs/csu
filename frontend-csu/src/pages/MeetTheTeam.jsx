@@ -1,11 +1,10 @@
 import React from 'react'
-// import { TeamContainer } from '../components/TeamContainer'
-import { TeamMemberCard } from '../components/TeamMemberCard'
+import { TeamContainer } from '../components/TeamContainer'
 
 export const MeetTheTeam = () => {
   return (
     <div>
-        <TeamMemberCard/>
+        <TeamContainer/>
     </div>
   )
 }
