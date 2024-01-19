@@ -1,7 +1,9 @@
 /* --- HEADER IMAGE CSS --- */
 
 .header-image {
-   background-color: var(--primary);
-   height: 200px;
-   border-radius: 10px;
+   background: url("../../res/images/csu-team.png") center/cover no-repeat;
+   margin: auto;
+   width: 720px;
+   height: 300px;
+   margin-bottom: 16px;
 }
