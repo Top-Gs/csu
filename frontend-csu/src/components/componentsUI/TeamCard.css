@@ -1,0 +1,15 @@
+.team-member-container {
+   width: 225px;
+}
+
+.member__image {
+   width: 225px;
+   border-radius: 8px;
+   box-shadow: 0 8px 8px -2px #c5e2f7;
+}
+
+.member__data {
+   display: flex;
+   gap: 12px;
+   font-weight: bold;
+}
