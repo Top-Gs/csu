@@ -2,10 +2,11 @@ import React from 'react'
 import "./componentsUI/TeamContainer.css"
 import { TeamMemberSlider } from './TeamMemberSlider'
 
+import backToTop from "../res/icons/icons8-collapse-arrow-48.png"
 
 export const TeamContainer = () => {
   return (
-    <main className="team-container">
+      <main id='top' className="team-container">
         <p className="team__headline">Intalneste echipa</p>
         <nav className="team__roles">
             <a href="#antrenor">Antrenor</a>
@@ -34,6 +35,7 @@ export const TeamContainer = () => {
             <p className="role__title">Portar</p>
             <TeamMemberSlider/>
         </section>
+        <a href="#top" className='back-to-top'><img src={backToTop} alt="" /></a> 
     </main>
   )
 }

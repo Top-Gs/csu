@@ -10,6 +10,7 @@ import { TeamContainer } from '../components/TeamContainer'
 import { HeaderImage } from '../components/HeaderImage';
 
 
+
 export const MeetTheTeam = () => {
   return (
     <div className='meet-the-team-container'>
