@@ -8,7 +8,7 @@
    padding-top: 16px;
    row-gap: 22px;
    margin: auto;
-   margin-bottom: 48px;
+   margin: 48px auto;
 }
 .team__headline {
    font-weight: bold;
