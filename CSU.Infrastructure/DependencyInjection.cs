@@ -1,5 +1,6 @@
 ﻿using CSU.Application.Common.Interfaces;
 using CSU.Infrastructure.Common.Persistence;
+using CSU.Infrastructure.Match.Persistance;
 using CSU.Infrastructure.Members.Persistence;
 using CSU.Infrastructure.News.Persistence;
 using CSU.Infrastructure.Sponsors.Persistence;
@@ -22,6 +23,7 @@ namespace CSU.Infrastructure
             services.AddScoped<INewsRepository, NewsRepository>();
             services.AddScoped<IMemberRepository, MemberRepository>();
             services.AddScoped<ISponsorsRepository, SponsorsRepository>();
+            services.AddScoped<IMatchRepository, MatchRepository>();
             services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<CsuDbContext>());
 
             return services;
