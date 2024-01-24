@@ -39,7 +39,7 @@ const HomePage = () => {
       <Navbar />
       <div className="homepage_team-photo" alt="CSU team photo." />
       <div className="homepage_logo-description">
-        <img src={Logo} />
+        <img src={Logo} className="homepage__image"/>
         <h1 className="homepage-description">
           Clubul Sportiv Universitatea Suceava
         </h1>
