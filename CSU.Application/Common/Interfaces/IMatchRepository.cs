@@ -1,10 +1,4 @@
-﻿using CSU.Domain.Match;
-using CSU.Domain.Sponsors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CSU.Domain.Matches;
 
 namespace CSU.Application.Common.Interfaces
 {
@@ -12,7 +6,7 @@ namespace CSU.Application.Common.Interfaces
     {
 
         Task CreateAsync(Match match);
-        Task<List<Match>?> GetAllAsync();
+        Task<List<Match>?> GetAllAsync(int number);
         Task<Match?> GetByIdAsync(Guid id);
         Task DeleteAsync(Match match);
     }

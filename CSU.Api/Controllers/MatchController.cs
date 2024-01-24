@@ -40,11 +40,11 @@ namespace CSU.Api.Controllers
         }
 
         [HttpGet(ApiEndpoints.V1.Match.GetAll)]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] int numbers)
         {
             try
             {
-                var match = await _matchService.GetAllAsync();
+                var match = await _matchService.GetAllAsync(numbers);
 
                 return Ok(match);
             }

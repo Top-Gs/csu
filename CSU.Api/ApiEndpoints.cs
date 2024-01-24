@@ -50,7 +50,7 @@
             }
             public static class Match
             {
-                private const string Base = $"{VersionBase}/matchs";
+                private const string Base = $"{VersionBase}/matches";
 
                 public const string Create = Base;
                 public const string GetAll = Base;

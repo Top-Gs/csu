@@ -1,15 +1,9 @@
-﻿using CSU.Contracts.V1.Requests;
+﻿using AutoMapper;
+
+using CSU.Contracts.V1.Requests;
 using CSU.Contracts.V1.Responses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using CSU.Domain.Matches;
 
-using System.Threading.Tasks;
-
-using CSU.Domain.Match;
-
-using AutoMapper;
 namespace CSU.Application.Mapping
 {
     public class MatchProfile : Profile

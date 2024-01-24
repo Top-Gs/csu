@@ -1,6 +1,6 @@
 ﻿using CSU.Domain.Users;
 
-namespace CSU.Domain.Match
+namespace CSU.Domain.Matches
 {
     public class Match
     {

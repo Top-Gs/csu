@@ -4,7 +4,7 @@ using CSU.Application.Common.Interfaces;
 using CSU.Application.Interfaces;
 using CSU.Contracts.V1.Requests;
 using CSU.Contracts.V1.Responses;
-using CSU.Domain.Match;
+using CSU.Domain.Matches;
 
 using Microsoft.AspNetCore.Http;
 
@@ -23,9 +23,9 @@ namespace CSU.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<List<MatchResponse>?> GetAllAsync()
+        public async Task<List<MatchResponse>?> GetAllAsync(int number)
         {
-            var match = await _matchRepository.GetAllAsync();
+            var match = await _matchRepository.GetAllAsync(number);
 
             var matchResponse = _mapper.Map<List<MatchResponse>>(match);
 
