@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
 {
     [DbContext(typeof(CsuDbContext))]
-    [Migration("20240117155000_Match")]
-    partial class Match
+    [Migration("20240124115112_InitialMigrations")]
+    partial class InitialMigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -135,7 +135,6 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                         .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
@@ -164,13 +163,10 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<string>("Position")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                    b.Property<int>("Position")
+                        .HasColumnType("int");
 
                     b.Property<byte[]>("ProfileImage")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<int>("Type")

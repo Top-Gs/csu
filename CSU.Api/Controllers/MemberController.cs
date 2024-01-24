@@ -41,11 +41,28 @@ namespace CSU.Api.Controllers
         }
 
         [HttpGet(ApiEndpoints.V1.Member.Get)]
-        public async Task<IActionResult> Get([FromRoute] Guid id)
+        public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             try
             {
                 var member = await _memberService.GetByIdAsync(id);
+
+                return Ok(member);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred: {ErrorMessage}", ex.Message);
+
+                return BadRequest("An error occurred");
+            }
+        }
+
+        [HttpGet(ApiEndpoints.V1.Member.GetAll)]
+        public async Task<IActionResult> GetAll([FromQuery] MemberType? type, [FromQuery] Position? position)
+        {
+            try
+            {
+                var member = await _memberService.GetAll(type!, position!);
 
                 return Ok(member);
             }

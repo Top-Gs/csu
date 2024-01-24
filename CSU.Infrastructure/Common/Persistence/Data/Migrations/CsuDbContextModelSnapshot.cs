@@ -132,7 +132,6 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                         .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
@@ -161,13 +160,10 @@ namespace CSU.Infrastructure.Common.Persistence.Data.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<string>("Position")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                    b.Property<int>("Position")
+                        .HasColumnType("int");
 
                     b.Property<byte[]>("ProfileImage")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<int>("Type")

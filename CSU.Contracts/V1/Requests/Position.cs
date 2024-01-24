@@ -3,9 +3,12 @@
 namespace CSU.Contracts.V1.Requests
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum MemberType
+    public enum Position
     {
-        MainTeam,
-        Junior
+        Antrenor,
+        Centru,
+        Inter,
+        Pivot,
+        Portar
     }
 }

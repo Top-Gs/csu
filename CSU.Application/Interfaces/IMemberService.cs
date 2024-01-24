@@ -7,5 +7,6 @@ namespace CSU.Application.Interfaces
     {
         Task<MemberResponse> CreateAsync(CreateMemberRequest request, Guid userId);
         Task<MemberResponse> GetByIdAsync(Guid id);
+        Task<List<MemberResponse>> GetAll(MemberType? type,Position? position);
     }
 }
