@@ -11,12 +11,10 @@ export const TeamMemberSlider = () => {
           <TeamMemberCard />
           <TeamMemberCard />
           <TeamMemberCard />
-          <TeamMemberCard />
         </div>
       </Carousel.Item>
       <Carousel.Item>
         <div className="d-flex justify-content-center gap-5">
-          <TeamMemberCard />
           <TeamMemberCard />
           <TeamMemberCard />
           <TeamMemberCard />
