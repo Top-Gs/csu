@@ -1,0 +1,22 @@
+/* MatchesCard.css */
+.matches-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-left: 20vw;
+  margin-right: 20vw;
+
+  /* Alte stilizări specifice componentei */
+}
+
+.matches-item {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  transform: scale(0.2);
+  /* Stilizări specifice logo-ului */
+}

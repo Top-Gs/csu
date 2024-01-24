@@ -1,0 +1,71 @@
+.homepage-container {
+  background: linear-gradient(
+    90deg,
+    var(--bg_gradient_blue) 0%,
+    var(--page_background) 15%,
+    var(--page_background) 85%,
+    var(--bg_gradient_blue) 100%
+  );
+}
+
+.homepage_team-photo {
+  background: url("../../res/images/csu-team.png") center/contain no-repeat;
+  width: 720px;
+  height: 300px;
+  margin: auto;
+}
+
+.homepage-description {
+  font-size: 40px;
+}
+.homepage_logo-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.matches-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+.more {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: none;
+  border-bottom: 1px solid;
+  color: #3e4095;
+  margin-bottom: 10px;
+}
+
+.more:hover {
+  transform: scale(1.05);
+}
+
+.news-card-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 420px);
+  row-gap: 32px;
+  column-gap: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.homepage__teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}

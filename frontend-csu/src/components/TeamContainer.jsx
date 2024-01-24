@@ -1,3 +1,4 @@
+
 import React from 'react'
 import "./componentsUI/TeamContainer.css"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -38,5 +39,6 @@ export const TeamContainer = () => {
         </section>
         <a href="#top" className='back-to-top'><img src={backToTop} alt="" /></a> 
     </main>
-  )
-}
+  );
+};
+export default TeamContainer;

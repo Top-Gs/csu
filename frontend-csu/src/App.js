@@ -16,6 +16,10 @@ import PlayerProfile from "./pages/PlayerProfile";
 import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { MeetTheTeam } from "./pages/MeetTheTeam";
+
+import Matches from "./pages/Matches";
+import HomePage from "./pages/HomePage";
+
 import { MeetTheTeamJuv } from "./pages/MeetTheTeamJuv";
 
 function App() {
@@ -38,6 +42,8 @@ function App() {
                <Route path="/admin/*" element={<AdminLayout />}>
                   <Route index element={<AdminDashboard />} />
                   <Route path="news" element={<NewsAdm />} />
+                    <Route path="/home" element={<HomePage />} />
+                      <Route path="/matches" element={<Matches />} />
                   {/* Add more admin routes as needed */}
                </Route>
             </Routes>
