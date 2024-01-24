@@ -12,8 +12,7 @@ namespace CSU.Application.Interfaces
     {
         Task<MatchResponse> CreateAsync(CreateMatchRequest request, Guid matchId);
         Task<MatchResponse?> GetByIdAsync(Guid id);
-        Task<List<MatchResponse>?> GetAllAsync();
+        Task<List<MatchResponse>?> GetAllAsync(int numbers);
         Task<bool> DeleteByIdAsync(Guid id);
-
     }
 }

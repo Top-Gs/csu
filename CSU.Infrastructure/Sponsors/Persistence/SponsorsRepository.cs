@@ -1,12 +1,6 @@
 ﻿using CSU.Application.Common.Interfaces;
 using CSU.Infrastructure.Common.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CSU.Application.Common.Interfaces;
-using CSU.Domain.Sponsors;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace CSU.Infrastructure.Sponsors.Persistence

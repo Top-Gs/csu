@@ -1,6 +1,6 @@
 ﻿using CSU.Application.Common.Interfaces;
 using CSU.Infrastructure.Common.Persistence;
-using CSU.Infrastructure.Match.Persistance;
+using CSU.Infrastructure.Matches.Persistance;
 using CSU.Infrastructure.Members.Persistence;
 using CSU.Infrastructure.News.Persistence;
 using CSU.Infrastructure.Sponsors.Persistence;
