@@ -19,7 +19,7 @@
 .news-card__image {
   /* background: url("../../res/images/image.jpg") no-repeat center;
    background-size: cover; */
-  object-fit: cover;
+  object-fit: contain;
   width: 420px;
   height: 364px;
   margin-bottom: 10px;
