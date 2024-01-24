@@ -27,10 +27,10 @@
 .team__roles a {
    padding: 4px 8px;
    text-decoration: none;
-   color: #3a7ab6;
+   color: #3e4095;
 }
 .team__roles a:hover {
-   background-color: #3a7ab6;
+   background-color: #3e4095;
    color: #fff;
 }
 .role__title {

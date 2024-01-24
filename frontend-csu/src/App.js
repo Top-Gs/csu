@@ -16,6 +16,7 @@ import PlayerProfile from "./pages/PlayerProfile";
 import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { MeetTheTeam } from "./pages/MeetTheTeam";
+import { MeetTheTeamJuv } from "./pages/MeetTheTeamJuv";
 
 function App() {
    return (
@@ -32,6 +33,7 @@ function App() {
                <Route path="/login" element={<LoginPage />} />
                <Route path="/register" element={<RegisterPage />} />
                <Route path="/mtt" element={<MeetTheTeam />} />
+               <Route path="/mttjuv" element={<MeetTheTeamJuv />} />
                {/* Admin Routes */}
                <Route path="/admin/*" element={<AdminLayout />}>
                   <Route index element={<AdminDashboard />} />

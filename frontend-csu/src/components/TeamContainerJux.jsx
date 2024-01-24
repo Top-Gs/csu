@@ -5,10 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { TeamMemberSlider } from './TeamMemberSlider'
 import backToTop from "../res/icons/icons8-collapse-arrow-48.png"
 
-export const TeamContainer = () => {
+export const TeamContainerJuv = () => {
   return (
       <main id='top' className="team-container">
-        <p className="team__headline">Intalneste echipa!</p>
+        <p className="team__headline">Intalneste echipa de juniori!</p>
         <nav className="team__roles">
             <a href="#antrenor">Antrenor</a>
             <a href="#centru">Centru</a>
