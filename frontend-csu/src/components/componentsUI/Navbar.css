@@ -13,7 +13,9 @@
    justify-content: center;
    align-items: center;
    width: 100px;
-   height: 100%;
+   height: 75px;
+   position: relative;
+   top: -8px;
    font-family: "Poppins", sans-serif;
    text-decoration: none;
    background-color: var(--navbar_bg);
@@ -31,6 +33,9 @@
    width: 55px;
    height: 55px;
    border-radius: 50%;
+   position: relative;
+   top: -10px;
+   left: 20px;
 }
 /* The Navbar */
 .navbar {
