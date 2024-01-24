@@ -1,7 +1,8 @@
 import React from 'react'
 import "./componentsUI/TeamContainer.css"
-import { TeamMemberSlider } from './TeamMemberSlider'
+import "bootstrap/dist/css/bootstrap.min.css"
 
+import { TeamMemberSlider } from './TeamMemberSlider'
 import backToTop from "../res/icons/icons8-collapse-arrow-48.png"
 
 export const TeamContainer = () => {
