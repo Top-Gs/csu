@@ -14,9 +14,11 @@ namespace CSU.Application
             services.AddScoped<INewsService, NewsService>();
             services.AddScoped<IMemberService, MemberService>();
             services.AddScoped<ISponsorsService, SponsorsService>();
+            services.AddScoped<IMatchService, MatchService>();
             services.AddAutoMapper(typeof(UserProfile));
             services.AddAutoMapper(typeof(NewsProfile));
             services.AddAutoMapper(typeof(SponsorProfile));
+            services.AddAutoMapper(typeof(MatchProfile));
 
             return services;
         }
