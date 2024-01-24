@@ -18,7 +18,10 @@ namespace CSU.Infrastructure.Members.Persistence
                 .IsRequired();
 
             builder.Property(m => m.Position)
-                .HasMaxLength(250);
+                .HasConversion(
+                    position => position.Value,
+                    value => Position.FromValue(value))
+                .IsRequired();
 
             builder.Property(m => m.FirstName)
                 .HasMaxLength(250)

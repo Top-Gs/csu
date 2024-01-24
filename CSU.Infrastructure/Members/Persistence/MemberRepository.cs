@@ -27,5 +27,24 @@ namespace CSU.Infrastructure.Members.Persistence
 
             return result;
         }
+
+        public async Task<List<Member>> GetAll(int type, int position)
+        {
+            IQueryable<Member> query = _dataContext.Members;
+
+            if (type != -1)
+            {
+                query = query.Where(m => m.Type == type);
+            }
+
+            if (position != -1)
+            {
+                query = query.Where(m => m.Position == position);
+            }
+
+            var result = await query.ToListAsync();
+
+            return result;
+        }
     }
 }

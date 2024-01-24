@@ -6,5 +6,6 @@ namespace CSU.Application.Common.Interfaces
     {
         Task CreateAsync(Member member);
         Task<Member?> GetByIdAsync(Guid id);
+        Task<List<Member>> GetAll(int type, int position);
     }
 }
