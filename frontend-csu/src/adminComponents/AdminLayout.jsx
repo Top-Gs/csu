@@ -53,7 +53,7 @@ const AdminDashboard = () => {
       <aside>
         <div className="profile">
           <div />
-          <p>Gutu Vasilii</p>
+          <p>Nume Admin</p>
         </div>
         <ul>
           {navItems.map((item) => (
