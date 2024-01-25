@@ -28,7 +28,8 @@
 }
 
 .navbar__image {
-   width: 50px;
+   transform: scale(1);
+   height: 50px;
    position: relative;
    top: -8px;
    left: 20px;

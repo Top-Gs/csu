@@ -28,8 +28,10 @@ function App() {
       <Router>
         <Routes>
           {/* Main routes for homepage */}
-          <Route path="/" element={<NewsPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/playerprofile" element={<PlayerProfile />} />
+          <Route path="/matches" element={<Matches />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/aboutus" element={<AboutUs />} />
@@ -42,8 +44,6 @@ function App() {
           <Route path="/admin/*" element={<AdminLayout />}>
             <Route index element={<AdminDashboard />} />
             <Route path="news" element={<NewsAdm />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/matches" element={<Matches />} />
             {/* Add more admin routes as needed */}
           </Route>
         </Routes>
