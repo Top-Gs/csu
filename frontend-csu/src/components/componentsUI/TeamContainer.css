@@ -1,0 +1,59 @@
+.team-container {
+   background-color: #fff;
+   width: 1100px;
+   display: grid;
+   border-radius: 16px;
+   grid-template-rows: 50px 50px repeat(5, 1fr);
+   justify-items: center;
+   padding-top: 16px;
+   row-gap: 22px;
+   margin: auto;
+   margin: 48px auto;
+}
+.team__headline {
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 28px;
+   text-align: center;
+}
+.team__roles {
+   display: flex;
+   gap: 64px;
+   align-items: center;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.team__roles a {
+   padding: 4px 8px;
+   text-decoration: none;
+   color: #3e4095;
+}
+.team__roles a:hover {
+   background-color: #3e4095;
+   color: #fff;
+}
+.role__title {
+   font-size: 22px;
+   font-weight: bold;
+   text-transform: uppercase;
+   margin-bottom: 8px;
+   text-align: center;
+}
+.role__container {
+   margin-bottom: 32px;
+}
+
+.back-to-top {
+   position: sticky;
+   bottom: 0;
+   filter: grayscale();
+   transition: all 300ms;
+   transform: scale(0.75);
+   display: flex;
+   z-index: 2;
+}
+.back-to-top:hover {
+   filter: none;
+   transform: scale(1.1);
+}

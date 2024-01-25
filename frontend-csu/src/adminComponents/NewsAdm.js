@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react"
 import { getNews } from "../api/news"
 import AddNewsModal from "./AddNewsModal"

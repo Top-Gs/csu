@@ -1,0 +1,20 @@
+.team-member-container {
+   width: 225px;
+   transition: all 300ms;
+}
+
+.team-member-container:hover {
+   transform: scale(1.1);
+}
+
+.member__image {
+   width: 225px;
+   border-radius: 8px;
+   box-shadow: 0 8px 8px -2px #c5e2f7;
+}
+
+.member__data {
+   display: flex;
+   gap: 12px;
+   font-weight: bold;
+}

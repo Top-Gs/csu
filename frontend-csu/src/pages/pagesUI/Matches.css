@@ -1,0 +1,79 @@
+.matches-container {
+   background: linear-gradient(
+      90deg,
+      var(--bg_gradient_blue) 0%,
+      var(--page_background) 15%,
+      var(--page_background) 85%,
+      var(--bg_gradient_blue) 100%
+   );
+}
+
+/* The team-photo image */
+.matches_team-photo {
+   background: url("../../res/images/csu-team.png") center/contain no-repeat;
+   width: 720px;
+   height: 300px;
+   margin: auto;
+}
+
+.matches-description {
+   font-size: 40px;
+}
+
+.matches_logo-description {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/*
+Components
+*/
+
+/* MatchesCard */
+.matches-card {
+   margin: 0, 20vw, 0, 20vw;
+}
+
+/* DropdownMenuContainer.css */
+.dropdown-menu-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   margin-left: 20vw;
+   margin-right: 20vw;
+}
+
+/* MatchesDropdownMenu.css */
+.dropdown-menu {
+   position: relative;
+}
+
+.dropdown-menu button {
+   padding: 10px;
+   border-width: 0;
+   font-size: 25px;
+}
+
+.dropdown-menu ul {
+   position: absolute;
+   font-size: 20px;
+   top: 100%;
+   list-style: none;
+   background-color: #fff;
+   display: none;
+}
+
+.dropdown-menu ul li {
+   padding: 10px;
+   cursor: pointer;
+}
+
+.dropdown-menu ul li:hover {
+   background-color: #f0f0f0;
+}
+
+.dropdown-menu:hover ul {
+   display: block;
+}
