@@ -10,7 +10,7 @@ import logo from "../res/images/logo-csu.png";
 export default function Navbar() {
    return (
       <nav className="navbar">
-         <a href="https://localhost:3000/">
+         <a href="https://localhost:3000/home">
             <img src={logo} className="navbar__image"></img>
          </a>
          <div className="navbar-element">
